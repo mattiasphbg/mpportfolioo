@@ -24,45 +24,47 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <header className="flex h-14 items-center justify-between px-4 lg:px-6">
-        <Link className="flex items-center justify-center" href="#">
-          <UserIcon className="h-6 w-6" />
-          <span className="sr-only">Portfolio</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium underline-offset-4 hover:underline"
-            href="#"
-          >
-            About
+    <>
+      <div>
+        <header className="flex h-14 items-center justify-between px-4 lg:px-6">
+          <Link className="flex items-center justify-center" href="#">
+            <UserIcon className="h-6 w-6" />
+            <span className="sr-only">Portfolio</span>
           </Link>
-          <Link
-            className="text-sm font-medium underline-offset-4 hover:underline"
-            href="#"
-          >
-            Projects
-          </Link>
-          <Link
-            className="text-sm font-medium underline-offset-4 hover:underline"
-            href="#"
-          >
-            Skills
-          </Link>
-          <Link
-            className="text-sm font-medium underline-offset-4 hover:underline"
-            href="#"
-          >
-            Contact
-          </Link>
-        </nav>
-      </header>
-      <body className={`font-sans ${inter.variable}`}>
-        <TRPCReactProvider cookies={cookies().toString()}>
-          {children}
-        </TRPCReactProvider>
-      </body>
-    </html>
+          <nav className="ml-auto flex gap-4 sm:gap-6">
+            <Link
+              className="text-sm font-medium underline-offset-4 hover:underline"
+              href="#"
+            >
+              About
+            </Link>
+            <Link
+              className="text-sm font-medium underline-offset-4 hover:underline"
+              href="#"
+            >
+              Projects
+            </Link>
+            <Link
+              className="text-sm font-medium underline-offset-4 hover:underline"
+              href="#"
+            >
+              Skills
+            </Link>
+            <Link
+              className="text-sm font-medium underline-offset-4 hover:underline"
+              href="#"
+            >
+              Contact
+            </Link>
+          </nav>
+        </header>
+        <div className={`font-sans ${inter.variable}`}>
+          <TRPCReactProvider cookies={cookies().toString()}>
+            {children}
+          </TRPCReactProvider>
+        </div>
+      </div>
+    </>
   );
 }
 
