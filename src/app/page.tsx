@@ -1,65 +1,172 @@
 import Link from "next/link";
 
 import { CreatePost } from "~/app/_components/create-post";
+
+import { Button } from "src/components/ui/button";
+import { CardHeader, CardContent, Card } from "src/components/ui/card";
+import { Badge } from "src/components/ui/badge";
+
 import { api } from "~/trpc/server";
 
 export default async function Home() {
   // const hello = await api.post.hello.query({ text: "from tRPC" });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
+    <>
+      <section className="w-full bg-gray-100 py-12 dark:bg-gray-800 md:py-24 lg:py-32 xl:py-48">
+        <div className="container px-4 text-center md:px-6">
+          <div className="space-y-6">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+              Welcome to My Portfolio
+            </h1>
+            <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl">
+              I am a web developer with a passion for creating beautiful and
+              accessible experiences.
+            </p>
+            <Button className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+              Hire Me
+            </Button>
+          </div>
         </div>
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-2xl text-white">
-            {/* {hello ? hello.greeting : "Loading tRPC query..."} */}
+      </section>
+      <section className="w-full py-12 md:py-24 lg:py-32" id="about">
+        <div className="container px-4 md:px-6">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            About Me
+          </h2>
+          <p className="mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
+            I'm a developer with a keen eye for detail and a passion for making
+            things beautiful. I love solving problems and bringing ideas to life
+            in the browser.
           </p>
         </div>
-
-        <CrudShowcase />
-      </div>
-    </main>
+      </section>
+      <section
+        className="w-full bg-gray-100 py-12 dark:bg-gray-800 md:py-24 lg:py-32"
+        id="projects"
+      >
+        <div className="container px-4 md:px-6">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Projects
+          </h2>
+          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <h3 className="text-xl font-bold">Project 1</h3>
+              </CardHeader>
+              <CardContent>
+                <img
+                  alt="Project 1"
+                  className="h-[200px] w-full object-cover"
+                  height="200"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "200/200",
+                    objectFit: "cover",
+                  }}
+                  width="200"
+                />
+                <p className="mt-4 text-gray-500">
+                  This is a description of the project.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="shadow-lg">
+              <CardHeader>
+                <h3 className="text-xl font-bold">Project 2</h3>
+              </CardHeader>
+              <CardContent>
+                <img
+                  alt="Project 2"
+                  className="h-[200px] w-full object-cover"
+                  height="200"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "200/200",
+                    objectFit: "cover",
+                  }}
+                  width="200"
+                />
+                <p className="mt-4 text-gray-500">
+                  This is a description of the project.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="shadow-lg">
+              <CardHeader>
+                <h3 className="text-xl font-bold">Project 3</h3>
+              </CardHeader>
+              <CardContent>
+                <img
+                  alt="Project 3"
+                  className="h-[200px] w-full object-cover"
+                  height="200"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "200/200",
+                    objectFit: "cover",
+                  }}
+                  width="200"
+                />
+                <p className="mt-4 text-gray-500">
+                  This is a description of the project.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+      <section className="w-full py-12 md:py-24 lg:py-32" id="skills">
+        <div className="container px-4 md:px-6">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Skills
+          </h2>
+          <div className="mt-8 flex flex-wrap items-center space-x-4">
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              JavaScript
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              React
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              Node.js
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              CSS
+            </Badge>
+          </div>
+        </div>
+      </section>
+      <section
+        className="w-full bg-gray-100 py-12 dark:bg-gray-800 md:py-24 lg:py-32"
+        id="contact"
+      >
+        <div className="container px-4 text-center md:px-6">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Contact Me
+          </h2>
+          <p className="mx-auto mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
+            Have a project in mind? Let's make something great together. Get in
+            touch with me.
+          </p>
+        </div>
+      </section>
+    </>
   );
 }
 
-async function CrudShowcase() {
-  // const latestPost = await api.post.getLatest.query();
+// async function CrudShowcase() {
+//   // const latestPost = await api.post.getLatest.query();
 
-  return (
-    <div className="w-full max-w-xs">
-      {/* {latestPost ? (
-        <p className="truncate">Your most recent post: {latestPost.name}</p>
-      ) : (
-        <p>You have no posts yet.</p>
-      )} */}
+//   return (
+//     <div className="w-full max-w-xs">
+//       {/* {latestPost ? (
+//         <p className="truncate">Your most recent post: {latestPost.name}</p>
+//       ) : (
+//         <p>You have no posts yet.</p>
+//       )} */}
 
-      <CreatePost />
-    </div>
-  );
-}
+//       <CreatePost />
+//     </div>
+//   );
+// }
