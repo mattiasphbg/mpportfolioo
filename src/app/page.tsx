@@ -141,7 +141,7 @@ export default async function Home() {
           <div className="mt-8 flex justify-center space-x-4">
             <a
               className="text-gray-500 hover:text-blue-600"
-              href="#"
+              href="https://www.linkedin.com/in/mattias-pettersson-a97b05184/"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -150,7 +150,7 @@ export default async function Home() {
             </a>
             <a
               className="text-gray-500 hover:text-blue-600"
-              href="#"
+              href="https://discord.com/users/253514757565448193"
               rel="noopener noreferrer"
               target="_blank"
             >
