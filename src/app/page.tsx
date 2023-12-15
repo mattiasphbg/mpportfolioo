@@ -2,8 +2,10 @@ import { Button } from "src/components/ui/button";
 import { CardHeader, CardContent, Card } from "src/components/ui/card";
 import { Badge } from "src/components/ui/badge";
 import { ModeToggle } from "src/components/ui/ModeToggle";
-import Toggle from "src/components/ui/Toggle";
+
 import Image from "next/image";
+import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
+
 import { api } from "~/trpc/server";
 
 export default async function Home() {
@@ -136,6 +138,27 @@ export default async function Home() {
             Have a project in mind? Let's make something great together. Get in
             touch with me.
           </p>
+          <div className="mt-8 flex justify-center space-x-4">
+            <a
+              className="text-gray-500 hover:text-blue-600"
+              href="#"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaLinkedinIn className="h-6 w-6" />
+              <span className="sr-only">LinkedIn</span>
+            </a>
+            <a
+              className="text-gray-500 hover:text-blue-600"
+              href="#"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaDiscord className="h-6 w-6" />
+
+              <span className="sr-only">Discord</span>
+            </a>
+          </div>
         </div>
       </section>
     </>
