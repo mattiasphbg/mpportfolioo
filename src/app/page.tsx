@@ -5,6 +5,7 @@ import { ModeToggle } from "src/components/ui/ModeToggle";
 
 import Image from "next/image";
 import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
+import { TbBrandGithubCopilot } from "react-icons/tb";
 
 import { api } from "~/trpc/server";
 
@@ -123,6 +124,9 @@ export default async function Home() {
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
               CSS
             </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              Powerapps
+            </Badge>
           </div>
         </div>
       </section>
@@ -157,6 +161,16 @@ export default async function Home() {
               <FaDiscord className="h-6 w-6" />
 
               <span className="sr-only">Discord</span>
+            </a>
+            <a
+              className="text-gray-500 hover:text-blue-600"
+              href="https://github.com/mattiasphbg"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <TbBrandGithubCopilot className="h-6 w-6" />
+
+              <span className="sr-only">GitHub</span>
             </a>
           </div>
         </div>
