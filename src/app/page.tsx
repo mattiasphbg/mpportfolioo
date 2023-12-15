@@ -1,16 +1,12 @@
-import Link from "next/link";
-
-import { CreatePost } from "~/app/_components/create-post";
-
 import { Button } from "src/components/ui/button";
 import { CardHeader, CardContent, Card } from "src/components/ui/card";
 import { Badge } from "src/components/ui/badge";
-
+import { ModeToggle } from "src/components/ui/ModeToggle";
+import Toggle from "src/components/ui/Toggle";
+import Image from "next/image";
 import { api } from "~/trpc/server";
 
 export default async function Home() {
-  // const hello = await api.post.hello.query({ text: "from tRPC" });
-
   return (
     <>
       <section className="w-full bg-gray-100 py-12 dark:bg-gray-800 md:py-24 lg:py-32 xl:py-48">
@@ -55,16 +51,13 @@ export default async function Home() {
                 <h3 className="text-xl font-bold">Project 1</h3>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   alt="Project 1"
                   className="h-[200px] w-full object-cover"
-                  height="200"
                   src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "200/200",
-                    objectFit: "cover",
-                  }}
-                  width="200"
+                  layout="responsive"
+                  width={200}
+                  height={200}
                 />
                 <p className="mt-4 text-gray-500">
                   This is a description of the project.
@@ -76,16 +69,13 @@ export default async function Home() {
                 <h3 className="text-xl font-bold">Project 2</h3>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   alt="Project 2"
                   className="h-[200px] w-full object-cover"
-                  height="200"
                   src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "200/200",
-                    objectFit: "cover",
-                  }}
-                  width="200"
+                  layout="responsive"
+                  width={200}
+                  height={200}
                 />
                 <p className="mt-4 text-gray-500">
                   This is a description of the project.
@@ -97,16 +87,13 @@ export default async function Home() {
                 <h3 className="text-xl font-bold">Project 3</h3>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   alt="Project 3"
                   className="h-[200px] w-full object-cover"
-                  height="200"
                   src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "200/200",
-                    objectFit: "cover",
-                  }}
-                  width="200"
+                  layout="responsive"
+                  width={200}
+                  height={200}
                 />
                 <p className="mt-4 text-gray-500">
                   This is a description of the project.
