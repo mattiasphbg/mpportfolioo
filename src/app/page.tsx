@@ -7,7 +7,7 @@ import Image from "next/image";
 import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
 import { TbBrandGithubCopilot } from "react-icons/tb";
 
-import { api } from "~/trpc/server";
+// import { api } from "~/trpc/server";
 
 export default async function Home() {
   return (
@@ -122,10 +122,13 @@ export default async function Home() {
               Node.js
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              CSS
+              Tailwind
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
               Powerapps
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              TypeScript
             </Badge>
           </div>
         </div>
@@ -164,7 +167,8 @@ export default async function Home() {
             </a>
             <a
               className="text-gray-500 hover:text-blue-600"
-              href="https://github.com/mattiasphbg"
+              href="https://github.com/mattiasphbg
+              "
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -174,6 +178,7 @@ export default async function Home() {
             </a>
           </div>
         </div>
+        <ModeToggle />
       </section>
     </>
   );
