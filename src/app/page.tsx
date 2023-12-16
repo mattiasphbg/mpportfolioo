@@ -1,7 +1,6 @@
 import { Button } from "src/components/ui/button";
 import { CardHeader, CardContent, Card } from "src/components/ui/card";
 import { Badge } from "src/components/ui/badge";
-import { ModeToggle } from "src/components/ui/ModeToggle";
 
 import Image from "next/image";
 import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
@@ -178,7 +177,6 @@ export default async function Home() {
             </a>
           </div>
         </div>
-        <ModeToggle />
       </section>
     </>
   );

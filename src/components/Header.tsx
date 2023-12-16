@@ -1,11 +1,13 @@
 import Link from "next/link";
 import React, { type SVGProps } from "react";
+import { ModeToggle } from "src/components/ui/ModeToggle";
+import { FaHome } from "react-icons/fa";
 
 export default function Header() {
   return (
     <header className="flex h-14 items-center justify-between px-4 lg:px-6">
       <Link className="flex items-center justify-center" href="/">
-        <UserIcon className="h-6 w-6" />
+        <FaHome className="h-6 w-6" />
         <span className="sr-only">Portfolio</span>
       </Link>
 
@@ -35,6 +37,9 @@ export default function Header() {
           Contact
         </Link>
       </nav>
+      <div className="ml-3">
+        <ModeToggle />
+      </div>
     </header>
   );
 }
