@@ -1,10 +1,25 @@
-import { Button } from "src/components/ui/button";
 import { CardHeader, CardContent, Card } from "src/components/ui/card";
 import { Badge } from "src/components/ui/badge";
+import { Button } from "src/components/ui/button";
+import { Label } from "src/components/ui/label";
+import { Input } from "src/components/ui/input";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "src/components/ui/dialog";
 
-import Image from "next/image";
+import AutoForm, { AutoFormSubmit } from "src/components/ui/auto-form";
+import { HireMeSchema } from "./schemas/form";
+
 import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
 import { TbBrandGithubCopilot } from "react-icons/tb";
+
+import Image from "next/image";
 
 // import { api } from "~/trpc/server";
 
@@ -21,9 +36,69 @@ export default async function Home() {
               I am a web developer with a passion for creating beautiful and
               accessible experiences.
             </p>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button
+                  className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                  variant="outline"
+                >
+                  Hire Me
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>Send Email</DialogTitle>
+                  <DialogDescription>
+                    To best assist you, please provide your name, phone number,
+                    email address, and area of interest or project you need help
+                    with. I will get back to you as soon as possible.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <AutoForm formSchema={HireMeSchema}></AutoForm>
+                </div>
+
+                {/* <div className="grid gap-4 py-4">
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="name" className="text-right">
+                      Name
+                    </Label>
+                    <Input
+                      id="name"
+                      defaultValue="Pedro Duarte"
+                      className="col-span-3"
+                    />
+                  </div>
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="username" className="text-right">
+                      Email
+                    </Label>
+                    <Input
+                      id="username"
+                      defaultValue="@peduarte"
+                      className="col-span-3"
+                    />
+                  </div>
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="username" className="text-right">
+                      Phone
+                    </Label>
+                    <Input
+                      id="username"
+                      defaultValue="+46"
+                      className="col-span-3"
+                    />
+                  </div>
+                </div> */}
+                <DialogFooter>
+                  <Button type="submit">Save changes</Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+            {/* 
             <Button className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
               Hire Me
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
