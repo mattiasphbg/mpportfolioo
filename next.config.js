@@ -4,7 +4,13 @@
  */
 await import("./src/env.js");
 
+const imageDomains = ["res.cloudinary.com"];
+
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  images: {
+    domains: imageDomains,
+  },
+};
 
 export default config;
