@@ -22,7 +22,7 @@ export async function POST(request: Request) {
 
     const selfData = await resend.emails.send({
       from: "Mattias Petterrson <info@petterssoncreative.se>",
-      to: ["mattiasp@hotmail.com"],
+      to: ["mattias.pettersson@futureitpartner.se"],
       subject: `Someone want to hire me at ${company} name ${name}`,
       text: ` Area of Intrest ${interest},
               ${message}
