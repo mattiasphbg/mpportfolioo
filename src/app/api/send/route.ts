@@ -3,14 +3,14 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(
-  email: string | undefined,
-  name?: string | undefined,
-  intrest?: string | undefined,
-  message?: string | undefined,
-  company?: string | undefined,
-  phone?: string | undefined,
-) {
+export async function POST(request: Request) {
+  const formData = await request.formData();
+  const email = String(formData.get("email"));
+  const name = String(formData.get("name"));
+  const interest = String(formData.get("interest"));
+  const message = String(formData.get("message"));
+  const company = String(formData.get("company"));
+  const phone = String(formData.get("phone"));
   try {
     const data = await resend.emails.send({
       from: "Mattias Petterrson <info@petterssoncreative.se>",
@@ -24,7 +24,7 @@ export async function POST(
       from: "Mattias Petterrson <info@petterssoncreative.se>",
       to: ["mattiasp@hotmail.com"],
       subject: `Someone want to hire me at ${company} name ${name}`,
-      text: ` Area of Intrest ${intrest},
+      text: ` Area of Intrest ${interest},
               ${message}
 
               Email: ${email}

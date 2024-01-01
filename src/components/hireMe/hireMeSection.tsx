@@ -10,19 +10,13 @@ import {
   DialogTrigger,
 } from "src/components/ui/dialog";
 
-import AutoForm, { AutoFormSubmit } from "src/components/ui/auto-form";
+import AutoForm from "src/components/ui/auto-form";
 import { HireMeSchema } from "../../app/schemas/form";
-import type * as z from "zod";
-import React, { useState } from "react";
+
+import React from "react";
 import { Button } from "src/components/ui/button";
 
 export function HireMeSection() {
-  const [values, setValues] = useState<Partial<z.infer<typeof HireMeSchema>>>(
-    {},
-  );
-  const { email, name, areaOfInterest, message, companyName, phoneNumber } =
-    values;
-
   return (
     <section className="w-full bg-gray-100 py-12 dark:bg-gray-800 md:py-24 lg:py-32 xl:py-48">
       <div className="container px-4 text-center md:px-6">
@@ -55,10 +49,38 @@ export function HireMeSection() {
               <div className="grid gap-4 py-4">
                 <AutoForm
                   formSchema={HireMeSchema}
-                  values={values}
-                  onValuesChange={setValues}
                   onSubmit={(submittedValues) => {
-                    // console.log("Form submitted with values:", submittedValues);
+                    const formData = new FormData();
+                    formData.append("email", `${submittedValues.email}`);
+                    formData.append("name", `${submittedValues.name}`);
+                    formData.append(
+                      "interest",
+                      `${submittedValues.areaOfInterest}`,
+                    );
+                    formData.append("message", `${submittedValues.message}`);
+                    formData.append(
+                      "company",
+                      `${submittedValues.companyName}`,
+                    );
+                    formData.append("phone", `${submittedValues.phoneNumber}`);
+
+                    fetch("https://www.petterssoncreative.se/api/send", {
+                      method: "POST",
+                      body: formData,
+                    })
+                      .then((response) => {
+                        if (response.ok) {
+                          return response.json();
+                        } else {
+                          throw new Error("Failed to submit form");
+                        }
+                      })
+                      .then((data) => {
+                        console.log("Response data:", data);
+                      })
+                      .catch((error) => {
+                        console.error("Error occurred:", error);
+                      });
                   }}
                   fieldConfig={{
                     message: {

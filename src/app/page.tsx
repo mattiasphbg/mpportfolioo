@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 import { CardHeader, CardContent, Card } from "src/components/ui/card";
