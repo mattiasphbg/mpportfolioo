@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   const phone = String(formData.get("phone"));
   try {
     const data = await resend.emails.send({
-      from: "Mattias Petterrson <info@petterssoncreative.se>",
+      from: "Mattias Petterrson <support@petterssoncreative.se>",
       to: [`${email}`],
       subject: `Thanks! ${name}`,
       text: "",
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     });
 
     const selfData = await resend.emails.send({
-      from: "Mattias Petterrson <info@petterssoncreative.se>",
+      from: "Mattias Petterrson <support@petterssoncreative.se>",
       to: ["mattias.pettersson@futureitpartner.se"],
       subject: `Someone want to hire me at ${company} name ${name}`,
       text: ` Area of Intrest ${interest},
