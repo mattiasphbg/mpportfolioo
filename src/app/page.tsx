@@ -23,8 +23,7 @@ export default function Home() {
           </h2>
           <p className="mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
             I'm a developer with a keen eye for detail and a passion for making
-            things beautiful. I love solving problems and bringing ideas to life
-            in the browser.
+            things. I love the empowerment of creating whatever I want.
           </p>
         </div>
       </section>

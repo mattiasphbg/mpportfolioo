@@ -15,12 +15,12 @@ export default function Page() {
               src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704200614/portfolio/Mp_hgd92f.png"
               className="transform-gpu cursor-pointer transition-transform hover:scale-125"
             />
-            <AvatarFallback>Dev</AvatarFallback>
+            <AvatarFallback>Me</AvatarFallback>
           </Avatar>
         </a>
         <h1 className="mt-4 text-2xl font-bold">Mattias Pettersson</h1>
         <p className="mt-2 text-center text-gray-600">
-          Full-stack Developer | T3 Stack | 5+ years of experience
+          Full-stack Developer | T3 Stack | 3+ years of experience
         </p>
       </div>
     </>
