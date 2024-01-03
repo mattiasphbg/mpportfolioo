@@ -1,3 +1,4 @@
+import { Mail } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "src/components/ui/avatar";
 
 export default function Page() {
@@ -23,6 +24,17 @@ export default function Page() {
           Full-stack Developer | T3 Stack | 3+ years of experience
         </p>
       </div>
+      <section className="mt-8 w-full">
+        <h2 className="mb-4 ml-2 text-xl font-bold">About Me</h2>
+        <p className="text-center text-gray-600">
+          I am a passionate full-stack developer with over 3 years of
+          experience. I enjoy working with the T3 stack and love building
+          because it allows me to create whatever I want. In my free time, I
+          work on a virtual museum where every item tells the history of a
+          country over centuries. I am always trying to stay up to date with the
+          newest tools that interest me.
+        </p>
+      </section>
     </>
   );
 }
