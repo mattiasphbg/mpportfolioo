@@ -28,6 +28,7 @@ export function HireMeSection() {
             I am a web developer with a passion for creating beautiful and
             accessible experiences.
           </p>
+
           <Dialog>
             <DialogTrigger asChild>
               <Button
@@ -46,9 +47,10 @@ export function HireMeSection() {
                   back to you as soon as possible.
                 </DialogDescription>
               </DialogHeader>
-              <div className="grid gap-4 py-4">
+              <div className="grid gap-4  py-2">
                 <AutoForm
                   formSchema={HireMeSchema}
+                  className="max-h-[500px] w-full max-w-[425px] overflow-y-auto sm:max-w-full"
                   onSubmit={(submittedValues) => {
                     const formData = new FormData();
                     formData.append("email", `${submittedValues.email}`);
