@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "src/components/ui/avatar";
-
+import { Badge } from "src/components/ui/badge";
 export default function Page() {
   return (
     <>
@@ -34,6 +34,21 @@ export default function Page() {
           country over centuries. I am always trying to stay up to date with the
           newest tools that interest me.
         </p>
+      </section>
+      <section className="mt-8 w-full">
+        <h2 className="mb-4 ml-2 text-xl font-bold">Skills & Expertise</h2>
+        <div className="flex flex-wrap justify-center gap-2">
+          <Badge>Typescript</Badge>
+          <Badge>Next.js</Badge>
+          <Badge>React</Badge>
+          <Badge>Prisma</Badge>
+          <Badge>tRPC</Badge>
+          <Badge>Clerk</Badge>
+          <Badge>Planetscale</Badge>
+          <Badge>tailwind</Badge>
+          <Badge>Azure</Badge>
+          <Badge>PowerApps</Badge>
+        </div>
       </section>
     </>
   );
