@@ -100,22 +100,34 @@ export default function Home() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center space-x-4">
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              JavaScript
+              Typescript
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              Next.js
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
               React
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Node.js
+              Prisma
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Tailwind
+              tRPC
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Powerapps
+              Clerk
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              TypeScript
+              Planetscale
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              tailwind
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              Azure
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              PowerApps
             </Badge>
           </div>
         </div>

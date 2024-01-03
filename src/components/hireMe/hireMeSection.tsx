@@ -13,10 +13,11 @@ import {
 import AutoForm from "src/components/ui/auto-form";
 import { HireMeSchema } from "../../app/schemas/form";
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "src/components/ui/button";
 
 export function HireMeSection() {
+  const [buttonText, setButtonText] = useState("Hire Me");
   return (
     <section className="w-full bg-gray-100 py-12 dark:bg-gray-800 md:py-24 lg:py-32 xl:py-48">
       <div className="container px-4 text-center md:px-6">
@@ -34,8 +35,11 @@ export function HireMeSection() {
               <Button
                 className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
                 variant="outline"
+                content="Send email"
+                onMouseEnter={() => setButtonText("Send Email")}
+                onMouseLeave={() => setButtonText("Hire Me")}
               >
-                Hire Me
+                {buttonText}
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
