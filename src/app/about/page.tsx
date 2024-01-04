@@ -1,6 +1,12 @@
 import { Mail } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "src/components/ui/avatar";
 import { Badge } from "src/components/ui/badge";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardTitle,
+} from "src/components/ui/card";
 export default function Page() {
   return (
     <>
@@ -49,6 +55,35 @@ export default function Page() {
           <Badge>Azure</Badge>
           <Badge>PowerApps</Badge>
         </div>
+      </section>
+      <section className="mt-8 w-full">
+        <h2 className="mb-4 ml-2 text-xl font-bold">Experience</h2>
+        <Card className="mb-4">
+          <CardHeader>
+            <CardTitle>Software Developer</CardTitle>
+            <div>Future It Partner | Apr 2022 - Present</div>
+          </CardHeader>
+          <CardContent>
+            Developed and maintained web applications using Typescript, Svelte,
+            Azure, Powerapps, PowerAutomate etc.
+          </CardContent>
+        </Card>
+        <Card className="mb-4">
+          <CardHeader>
+            <CardTitle>Software Developer</CardTitle>
+            <div> B3 Kodify AB | 2021 - 2021</div>
+          </CardHeader>
+          <CardContent>
+            Worked on JavaScript and Python (Django.) projects.
+          </CardContent>
+        </Card>
+        <Card className="mb-4">
+          <CardHeader>
+            <CardTitle>Software Developer</CardTitle>
+            <div> Rocketlabs | 2020 - 2020</div>
+          </CardHeader>
+          <CardContent>PHP: laravel</CardContent>
+        </Card>
       </section>
     </>
   );
