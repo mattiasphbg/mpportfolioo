@@ -4,7 +4,6 @@ import { ThemeProvider } from "src/components/theme-provider";
 import Header from "src/components/Header";
 import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
-import Footer from "src/components/Footer";
 
 import { TRPCReactProvider } from "~/trpc/react";
 

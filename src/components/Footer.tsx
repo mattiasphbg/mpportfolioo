@@ -1,6 +1,4 @@
 import React from "react";
-import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
-import { TbBrandGithubCopilot } from "react-icons/tb";
 
 export default function Footer() {
   return (
