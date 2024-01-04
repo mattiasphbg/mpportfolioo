@@ -7,6 +7,8 @@ import {
   CardContent,
   CardTitle,
 } from "src/components/ui/card";
+import Link from "next/link";
+
 export default function Page() {
   return (
     <>
@@ -83,6 +85,56 @@ export default function Page() {
             <div> Rocketlabs | 2020 - 2020</div>
           </CardHeader>
           <CardContent>PHP: laravel</CardContent>
+        </Card>
+      </section>
+      <section className="mt-8 w-full">
+        <h2 className="mb-4 ml-2 text-xl font-bold">Current Projects</h2>
+        <Card className="mb-4">
+          <CardHeader>
+            <CardTitle>Thoughtful gallery</CardTitle>
+          </CardHeader>
+          <CardContent>
+            A virtual museum.
+            <Link
+              className="ml-2 underline"
+              href="https://www.thoughtful-gallery.com/"
+              target="_blank"
+            >
+              View Project
+            </Link>
+          </CardContent>
+        </Card>
+        <Card className="mb-4">
+          <CardHeader>
+            <CardTitle>Integration with Also</CardTitle>
+          </CardHeader>
+          <CardContent>
+            Displaying information about customers' purchased packages and
+            comparing it to the previous month's data to enhance the customer
+            experience.
+            <Link
+              className="ml-2 underline"
+              href="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704364163/portfolio/meanwhile_ah5uc7.png"
+              target="_blank"
+            >
+              View Project
+            </Link>
+          </CardContent>
+        </Card>
+        <Card className="mb-4">
+          <CardHeader>
+            <CardTitle>One Bridge</CardTitle>
+          </CardHeader>
+          <CardContent>
+            hr solution: onboarding, offboarding etc.
+            <Link
+              className="ml-2 underline"
+              href="https://www.onebridge.se/"
+              target="_blank"
+            >
+              View Project
+            </Link>
+          </CardContent>
         </Card>
       </section>
     </>
