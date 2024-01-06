@@ -14,9 +14,14 @@ import {
   HoverCard,
 } from "src/components/ui/hover-card";
 
-import { ListProject } from "src/components/project/listProject";
+import React from "react";
 
-export default function Page() {
+import { api } from "src/trpc/react";
+import { title } from "process";
+
+export function ListProject() {
+  const { data } = api.project.getAll.useQuery();
+
   return (
     <>
       <div className="flex min-h-screen w-full flex-col">
@@ -33,7 +38,42 @@ export default function Page() {
             </form>
           </div>
           <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <ListProject />
+            {data?.map((row, i) => (
+              <Card key={i}>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <Image
+                    alt="Project Image"
+                    className="h-20 w-20 rounded-lg object-cover"
+                    height={100}
+                    src={`${row.img}`}
+                    style={{
+                      aspectRatio: "100/100",
+                      objectFit: "cover",
+                    }}
+                    width={100}
+                  />
+                  <div className="grid gap-1">
+                    <CardTitle>{row.title}</CardTitle>{" "}
+                    <CardDescription>{row.description}</CardDescription>{" "}
+                  </div>
+                </CardHeader>
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <Button className="mt-4" variant="outline">
+                      View Details
+                    </Button>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80">
+                    <div className="p-4">
+                      <h4 className="font-medium">Project 1</h4>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        {row.description}
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+              </Card>
+            ))}
 
             {/* <Card>
               <CardHeader className="flex flex-row items-center gap-4">
