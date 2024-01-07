@@ -106,7 +106,7 @@ export function ProjectById({ id }: { id: string }) {
               </div>
               <div>
                 <h3 className="font-semibold">Team Members</h3>
-                <p>{data!.Team?.join(", ")}</p>
+                <p>{data?.Team ? data.Team.join(", ") : ""}</p>
               </div>
               <div>
                 <h3 className="font-semibold">Category</h3>
