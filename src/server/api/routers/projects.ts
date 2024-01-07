@@ -1,7 +1,6 @@
-import { Input } from "src/components/ui/input";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
-import { string, z } from "zod";
+import { z } from "zod";
 
 export const projects = createTRPCRouter({
   getAll: publicProcedure.query(({ ctx }) => {

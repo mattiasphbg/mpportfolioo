@@ -58,7 +58,7 @@ export function ProjectById({ id }: { id: string }) {
                   alt="Screenshot 1"
                   className="h-64 w-full rounded-md object-cover"
                   height="200"
-                  src="/placeholder.svg"
+                  src={`${data?.screenshotOne}`}
                   style={{
                     aspectRatio: "200/200",
                     objectFit: "cover",
@@ -69,7 +69,7 @@ export function ProjectById({ id }: { id: string }) {
                   alt="Screenshot 2"
                   className="h-64 w-full rounded-md object-cover"
                   height="200"
-                  src="/placeholder.svg"
+                  src={`${data?.screenshotOne}`}
                   style={{
                     aspectRatio: "200/200",
                     objectFit: "cover",
@@ -81,10 +81,9 @@ export function ProjectById({ id }: { id: string }) {
             <section>
               <h2 className="text-xl font-bold">Technologies Used</h2>
               <ul className="list-inside list-disc space-y-1">
-                <li>React.js</li>
-                <li>Tailwind CSS</li>
-                <li>Next.js</li>
-                <li>Node.js</li>
+                {((data?.techUsed as string[]) ?? []).map((tech, i) => (
+                  <li key={i}>{tech}</li>
+                ))}
               </ul>
             </section>
           </div>
@@ -93,15 +92,17 @@ export function ProjectById({ id }: { id: string }) {
             <div className="space-y-6">
               <div>
                 <h3 className="font-semibold">Duration</h3>
-                <p>January 2024 - Present</p>
+                <p>
+                  {data?.start} - {data?.end}
+                </p>
               </div>
               <div>
                 <h3 className="font-semibold">Team Members</h3>
-                <p>John Doe, Jane Smith, Alice Johnson</p>
+                <p>{(data?.Team as string[] | undefined)?.join(", ")}</p>
               </div>
               <div>
                 <h3 className="font-semibold">Category</h3>
-                <p>Web Development</p>
+                <p>{data?.category}</p>
               </div>
             </div>
           </aside>
