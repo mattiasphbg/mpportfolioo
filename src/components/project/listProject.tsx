@@ -15,11 +15,14 @@ import {
 } from "src/components/ui/hover-card";
 
 import React from "react";
+import Link from "next/link";
 
 import { api } from "src/trpc/react";
 
 export function ListProject() {
-  const { data } = api.project.getAll.useQuery();
+  const { data, isLoading } = api.project.getAll.useQuery();
+
+  const isProduction = process.env.NODE_ENV === "production";
 
   return (
     <>
@@ -44,9 +47,19 @@ export function ListProject() {
           </CardHeader>
           <HoverCard>
             <HoverCardTrigger asChild>
-              <Button className="mt-4" variant="outline">
-                View Details
-              </Button>
+              {isProduction ? (
+                <Link href={`https://www.petterssoncreative.se/${field.id}`}>
+                  <Button className="mt-4" variant="outline">
+                    View details
+                  </Button>
+                </Link>
+              ) : (
+                <Link href={`http://localhost:3000/projects/${field.id}`}>
+                  <Button className="mt-4" variant="outline">
+                    View details
+                  </Button>
+                </Link>
+              )}
             </HoverCardTrigger>
             <HoverCardContent className="w-80">
               <div className="p-4">
