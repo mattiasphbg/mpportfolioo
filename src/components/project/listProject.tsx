@@ -48,7 +48,9 @@ export function ListProject() {
           <HoverCard>
             <HoverCardTrigger asChild>
               {isProduction ? (
-                <Link href={`https://www.petterssoncreative.se/${field.id}`}>
+                <Link
+                  href={`https://www.petterssoncreative.se/projects/${field.id}`}
+                >
                   <Button className="mt-4" variant="outline">
                     View details
                   </Button>
