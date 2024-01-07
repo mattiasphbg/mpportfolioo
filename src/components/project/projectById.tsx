@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 import { api } from "src/trpc/react";
 
@@ -60,7 +63,7 @@ export function ProjectById({ id }: { id: string }) {
                     alt="Screenshot 1"
                     className="h-64 w-full rounded-md object-cover"
                     height={200}
-                    src={data.screenshotOne as string}
+                    src={data?.screenshotOne}
                     style={{
                       aspectRatio: "1/1",
                       objectFit: "cover",
@@ -73,7 +76,7 @@ export function ProjectById({ id }: { id: string }) {
                     alt="Screenshot 2"
                     className="h-64 w-full rounded-md object-cover"
                     height={200}
-                    src={data.screenshotTwo as string}
+                    src={data?.screenshotTwo}
                     style={{
                       aspectRatio: "1/1",
                       objectFit: "cover",
@@ -86,7 +89,7 @@ export function ProjectById({ id }: { id: string }) {
             <section>
               <h2 className="text-xl font-bold">Technologies Used</h2>
               <ul className="list-inside list-disc space-y-1">
-                {((data?.techUsed as string[]) ?? []).map((tech, i) => (
+                {(data?.techUsed ?? [] ?? []).map((tech, i) => (
                   <li key={i}>{tech}</li>
                 ))}
               </ul>
@@ -103,7 +106,7 @@ export function ProjectById({ id }: { id: string }) {
               </div>
               <div>
                 <h3 className="font-semibold">Team Members</h3>
-                <p>{(data?.Team as string[] | undefined)?.join(", ")}</p>
+                <p>{data!.Team?.join(", ")}</p>
               </div>
               <div>
                 <h3 className="font-semibold">Category</h3>
