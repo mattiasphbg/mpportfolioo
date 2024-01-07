@@ -14,6 +14,7 @@ import { LuArrowLeft } from "react-icons/lu";
 
 export function ProjectById({ id }: { id: string }) {
   const { data } = api.project.getOne.useQuery({ id: id });
+
   const isProduction = process.env.NODE_ENV === "production";
   return (
     <>
@@ -54,28 +55,32 @@ export function ProjectById({ id }: { id: string }) {
             <section>
               <h2 className="text-xl font-bold">Screenshots</h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <Image
-                  alt="Screenshot 1"
-                  className="h-64 w-full rounded-md object-cover"
-                  height="200"
-                  src={`${data?.screenshotOne}`}
-                  style={{
-                    aspectRatio: "200/200",
-                    objectFit: "cover",
-                  }}
-                  width="200"
-                />
-                <Image
-                  alt="Screenshot 2"
-                  className="h-64 w-full rounded-md object-cover"
-                  height="200"
-                  src={`${data?.screenshotOne}`}
-                  style={{
-                    aspectRatio: "200/200",
-                    objectFit: "cover",
-                  }}
-                  width="200"
-                />
+                {data?.screenshotOne && (
+                  <Image
+                    alt="Screenshot 1"
+                    className="h-64 w-full rounded-md object-cover"
+                    height={200}
+                    src={data.screenshotOne as string}
+                    style={{
+                      aspectRatio: "1/1",
+                      objectFit: "cover",
+                    }}
+                    width={200}
+                  />
+                )}
+                {data?.screenshotTwo && (
+                  <Image
+                    alt="Screenshot 2"
+                    className="h-64 w-full rounded-md object-cover"
+                    height={200}
+                    src={data.screenshotTwo as string}
+                    style={{
+                      aspectRatio: "1/1",
+                      objectFit: "cover",
+                    }}
+                    width={200}
+                  />
+                )}
               </div>
             </section>
             <section>

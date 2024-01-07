@@ -14,6 +14,7 @@ model Portfolio_Project {
   description   String
   end           String?
   img           String
+  related       String[]
   screenshotOne String?
   screenshotTwo String?
   start         String?
