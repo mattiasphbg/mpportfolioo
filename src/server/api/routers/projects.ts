@@ -36,4 +36,18 @@ export const projects = createTRPCRouter({
       });
       return add;
     }),
+  getMultiple: publicProcedure
+    .input(z.array(z.string()))
+    .query(({ ctx, input }) => {
+      const projectIds = input;
+      const projects = ctx.db.portfolio_Project.findMany({
+        where: {
+          id: {
+            in: projectIds,
+          },
+        },
+      });
+
+      return projects;
+    }),
 });
