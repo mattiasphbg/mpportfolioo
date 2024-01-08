@@ -1,18 +1,7 @@
 "use client";
 import { Button } from "src/components/ui/button";
-import Image from "next/image";
+
 import { Input } from "src/components/ui/input";
-import {
-  CardTitle,
-  CardDescription,
-  CardHeader,
-  Card,
-} from "src/components/ui/card";
-import {
-  HoverCardTrigger,
-  HoverCardContent,
-  HoverCard,
-} from "src/components/ui/hover-card";
 
 import { ListProject } from "src/components/project/listProject";
 

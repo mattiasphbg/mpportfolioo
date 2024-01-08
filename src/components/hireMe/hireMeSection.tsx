@@ -16,18 +16,23 @@ import { HireMeSchema } from "../../app/schemas/form";
 import React, { useState } from "react";
 import { Button } from "src/components/ui/button";
 
-export function HireMeSection() {
+export function HireMeSection({
+  title,
+  subTitles,
+}: {
+  title: string;
+  subTitles: string;
+}) {
   const [buttonText, setButtonText] = useState("Hire Me");
   return (
     <section className="w-full bg-gray-100 py-12 dark:bg-gray-800 md:py-24 lg:py-32 xl:py-48">
       <div className="container px-4 text-center md:px-6">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            Welcome to My Portfolio
+            {title}
           </h1>
           <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl">
-            I am a web developer with a passion for creating beautiful and
-            accessible experiences.
+            {subTitles}
           </p>
 
           <Dialog>
@@ -35,9 +40,9 @@ export function HireMeSection() {
               <Button
                 className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
                 variant="outline"
-                content="Send email"
-                onMouseEnter={() => setButtonText("Send Email")}
-                onMouseLeave={() => setButtonText("Hire Me")}
+                content="Send Email"
+                onMouseEnter={() => setButtonText("Hire me")}
+                onMouseLeave={() => setButtonText("Send Email")}
               >
                 {buttonText}
               </Button>

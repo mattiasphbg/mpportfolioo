@@ -10,12 +10,14 @@ import { HireMeSection } from "src/components/hireMe/hireMeSection";
 
 import Image from "next/image";
 
-// import { api } from "~/trpc/server";
-
 export default function Home() {
   return (
     <>
-      <HireMeSection />
+      <HireMeSection
+        title="Welcome to My Portfolio"
+        subTitles="I am a web developer with a passion for creating beautiful and
+            accessible experiences."
+      />
       <section className="w-full py-12 md:py-24 lg:py-32" id="about">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
