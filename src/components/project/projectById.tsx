@@ -18,6 +18,10 @@ import { LuArrowLeft } from "react-icons/lu";
 export function ProjectById({ id }: { id: string }) {
   const { data } = api.project.getOne.useQuery({ id: id });
 
+  const { data: relatedProjets } = api.project.getMultiple.useQuery(
+    data?.related,
+  );
+
   const isProduction = process.env.NODE_ENV === "production";
   return (
     <>
@@ -117,38 +121,20 @@ export function ProjectById({ id }: { id: string }) {
         </main>
         <section className="bg-gray-100 p-4 dark:bg-gray-800 lg:p-8">
           <h2 className="mb-4 text-xl font-bold">Related Projects</h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <Card>
-              <CardHeader>
-                <CardTitle>Related Project 1</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Related Project 2</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Related Project 3</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          {relatedProjets?.map((row, i) => (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <Card key={row.id}>
+                <CardHeader>
+                  <CardTitle>{row.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {row.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          ))}
         </section>
       </div>
     </>

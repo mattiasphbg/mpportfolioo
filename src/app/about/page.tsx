@@ -24,7 +24,7 @@ export default function Page() {
               src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704200614/portfolio/Mp_hgd92f.png"
               className="transform-gpu cursor-pointer transition-transform hover:scale-125"
             />
-            <AvatarFallback>Me</AvatarFallback>
+            <AvatarFallback>MP</AvatarFallback>
           </Avatar>
         </a>
         <h1 className="mt-4 text-2xl font-bold">Mattias Pettersson</h1>
