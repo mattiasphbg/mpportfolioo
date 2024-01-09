@@ -32,13 +32,13 @@ export function ListProject() {
             <Image
               alt="Project Image"
               className="h-20 w-20 rounded-lg object-cover"
-              height={100}
+              height={2000}
               src={`${field.img}`}
               style={{
                 aspectRatio: "100/100",
                 objectFit: "cover",
               }}
-              width={100}
+              width={2000}
             />
             <div className="grid gap-1">
               <CardTitle>{field.title}</CardTitle>

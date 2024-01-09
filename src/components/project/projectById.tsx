@@ -66,26 +66,26 @@ export function ProjectById({ id }: { id: string }) {
                   <Image
                     alt="Screenshot 1"
                     className="h-64 w-full rounded-md object-cover"
-                    height={200}
+                    height={2000}
                     src={data?.screenshotOne}
                     style={{
                       aspectRatio: "1/1",
                       objectFit: "cover",
                     }}
-                    width={200}
+                    width={2000}
                   />
                 )}
                 {data?.screenshotTwo && (
                   <Image
                     alt="Screenshot 2"
                     className="h-64 w-full rounded-md object-cover"
-                    height={200}
+                    height={1000}
                     src={data?.screenshotTwo}
                     style={{
                       aspectRatio: "1/1",
                       objectFit: "cover",
                     }}
-                    width={200}
+                    width={1000}
                   />
                 )}
               </div>
@@ -121,9 +121,9 @@ export function ProjectById({ id }: { id: string }) {
         </main>
         <section className="bg-gray-100 p-4 dark:bg-gray-800 lg:p-8">
           <h2 className="mb-4 text-xl font-bold">Related Projects</h2>
-          {relatedProjets?.map((row, i) => (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <Card key={row.id}>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedProjets?.map((row, i) => (
+              <Card key={i}>
                 <CardHeader>
                   <CardTitle>{row.title}</CardTitle>
                 </CardHeader>
@@ -133,8 +133,8 @@ export function ProjectById({ id }: { id: string }) {
                   </p>
                 </CardContent>
               </Card>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
       </div>
     </>

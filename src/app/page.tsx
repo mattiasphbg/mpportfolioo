@@ -40,7 +40,7 @@ export default function Home() {
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="shadow-lg">
               <CardHeader>
-                <h3 className="text-xl font-bold">Project 1</h3>
+                <h3 className="text-xl font-bold">One Bridge</h3>
               </CardHeader>
               <CardContent>
                 <Image
