@@ -65,7 +65,7 @@ export function ListProject() {
             </HoverCardTrigger>
             <HoverCardContent className="w-80">
               <div className="p-4">
-                <h4 className="font-medium">Project 1</h4>
+                <h4 className="font-medium">{field.title}</h4>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   {field.description}
                 </p>
