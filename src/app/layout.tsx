@@ -3,6 +3,7 @@ import React from "react";
 import { ThemeProvider } from "src/components/theme-provider";
 import Header from "src/components/Header";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { cookies } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
@@ -37,7 +38,7 @@ export default function RootLayout({
             <TRPCReactProvider cookies={cookies().toString()}>
               {children}
             </TRPCReactProvider>
-            {/* <Footer /> */}
+            <Analytics />
           </ThemeProvider>
         </body>
       </html>
