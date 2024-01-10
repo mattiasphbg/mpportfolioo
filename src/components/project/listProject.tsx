@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "src/components/ui/button";
 import Image from "next/image";
+import { Skeleton } from "src/components/ui/skeleton";
 
 import {
   CardTitle,
@@ -23,6 +24,53 @@ export function ListProject() {
   const { data, isLoading } = api.project.getAll.useQuery();
 
   const isProduction = process.env.NODE_ENV === "production";
+
+  if (isLoading) {
+    return (
+      <>
+        <Card>
+          <CardHeader className="flex flex-row items-center gap-4">
+            <Skeleton className="h-20 w-20 rounded-lg" />
+            <div className="grid gap-1">
+              <Skeleton className="h-4 w-40" />
+              <Skeleton className="h-3 w-60" />
+            </div>
+          </CardHeader>
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <Skeleton className="h-10 w-20" />
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80">
+              <div className="p-4">
+                <Skeleton className="h-4 w-60" />
+                <Skeleton className="h-3 w-80" />
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center gap-4">
+            <Skeleton className="h-20 w-20 rounded-lg" />
+            <div className="grid gap-1">
+              <Skeleton className="h-4 w-40" />
+              <Skeleton className="h-3 w-60" />
+            </div>
+          </CardHeader>
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <Skeleton className="h-10 w-20" />
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80">
+              <div className="p-4">
+                <Skeleton className="h-4 w-60" />
+                <Skeleton className="h-3 w-80" />
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+        </Card>
+      </>
+    );
+  }
 
   return (
     <>
