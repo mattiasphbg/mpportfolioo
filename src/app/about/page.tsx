@@ -66,8 +66,9 @@ export default function Page() {
             <div>Future It Partner | Apr 2022 - Present</div>
           </CardHeader>
           <CardContent>
-            Developed and maintained web applications using Typescript, Svelte,
-            Azure, Powerapps, PowerAutomate etc.
+            Developed and maintained web applications utilizing Typescript,
+            Svelte, Azure, PowerApps, Power Automate, and other related
+            technologies.
           </CardContent>
         </Card>
         <Card className="mb-4">
@@ -76,7 +77,8 @@ export default function Page() {
             <div> B3 Kodify AB | 2021 - 2021</div>
           </CardHeader>
           <CardContent>
-            Worked on JavaScript and Python (Django.) projects.
+            Worked on projects involving JavaScript and Python, specifically
+            using Django.
           </CardContent>
         </Card>
         <Card className="mb-4">
@@ -109,9 +111,8 @@ export default function Page() {
             <CardTitle>Integration with Also</CardTitle>
           </CardHeader>
           <CardContent>
-            Displaying information about customers' purchased packages and
-            comparing it to the previous month's data to enhance the customer
-            experience.
+            Analyzing customers' purchased packages and comparing the data to
+            the previous month to improve the customer experience.
             <Link
               className="ml-2 underline"
               href="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704364163/portfolio/meanwhile_ah5uc7.png"
@@ -126,7 +127,7 @@ export default function Page() {
             <CardTitle>One Bridge</CardTitle>
           </CardHeader>
           <CardContent>
-            hr solution: onboarding, offboarding etc.
+            HR solution: Onboarding, offboarding, and more.
             <Link
               className="ml-2 underline"
               href="https://www.onebridge.se/"
