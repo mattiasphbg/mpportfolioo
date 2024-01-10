@@ -46,19 +46,17 @@ export default function Home() {
                 <Image
                   alt="Project 1"
                   className="h-[200px] w-full object-cover"
-                  src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1703675151/portfolio/msedge_IHbU7dlQH8_rav4fg.jpg"
+                  src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704802806/portfolio/oneBridge_new_four_nccgsh.png"
                   layout="responsive"
                   width={200}
                   height={200}
                 />
-                <p className="mt-4 text-gray-500">
-                  This is a description of the project.
-                </p>
+                <p className="mt-4 text-gray-500">all-in-one HR solution</p>
               </CardContent>
             </Card>
             <Card className="shadow-lg">
               <CardHeader>
-                <h3 className="text-xl font-bold">Project 2</h3>
+                <h3 className="text-xl font-bold">Thoughtful-gallery</h3>
               </CardHeader>
               <CardContent>
                 <Image
@@ -70,25 +68,26 @@ export default function Home() {
                   height={200}
                 />
                 <p className="mt-4 text-gray-500">
-                  This is a description of the project.
+                  Isn't it fascinating to be able to explore world history?
                 </p>
               </CardContent>
             </Card>
             <Card className="shadow-lg">
               <CardHeader>
-                <h3 className="text-xl font-bold">Project 3</h3>
+                <h3 className="text-xl font-bold">HaBygg Onboarding</h3>
               </CardHeader>
               <CardContent>
                 <Image
                   alt="Project 3"
                   className="h-[200px] w-full object-cover"
-                  src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1703675151/portfolio/msedge_IHbU7dlQH8_rav4fg.jpg"
+                  src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704806874/portfolio/habygg_cgjwkx.png"
                   layout="responsive"
                   width={200}
                   height={200}
                 />
                 <p className="mt-4 text-gray-500">
-                  This is a description of the project.
+                  Streamlining the process to make new employee integration a
+                  breeze.
                 </p>
               </CardContent>
             </Card>
@@ -102,7 +101,10 @@ export default function Home() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center space-x-4">
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Typescript
+              JavaScript
+            </Badge>
+            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
+              TypeScript
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
               Next.js
@@ -183,19 +185,3 @@ export default function Home() {
     </>
   );
 }
-
-// async function CrudShowcase() {
-//   // const latestPost = await api.post.getLatest.query();
-
-//   return (
-//     <div className="w-full max-w-xs">
-//       {/* {latestPost ? (
-//         <p className="truncate">Your most recent post: {latestPost.name}</p>
-//       ) : (
-//         <p>You have no posts yet.</p>
-//       )} */}
-
-//       <CreatePost />
-//     </div>
-//   );
-// }
