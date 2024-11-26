@@ -14,9 +14,8 @@ export default function Home() {
   return (
     <>
       <HireMeSection
-        title="Welcome to My Portfolio"
-        subTitles="I am a web developer with a passion for creating beautiful and
-            accessible experiences."
+        title="Welcome"
+        subTitles="My name is Mattias, and I'm a passionate full-stack developer driven by the desire to create anything I imagine."
       />
       <section className="w-full py-12 md:py-24 lg:py-32" id="about">
         <div className="container px-4 md:px-6">
@@ -24,8 +23,12 @@ export default function Home() {
             About Me
           </h2>
           <p className="mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
-            I'm a developer with a keen eye for detail and a passion for making
-            things. I love the empowerment of creating whatever I want.
+            Driven full-stack developer with 3+ years of experience in
+            full-stack development. I help companies optimize their processes by
+            developing innovative solutions that increase efficiency and
+            productivity. For example, I created a system for the sales
+            department to analyze and compare sales from previous months,
+            leading to better strategic decisions.
           </p>
         </div>
       </section>
@@ -101,10 +104,10 @@ export default function Home() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center space-x-4">
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              JavaScript
+              TypeScript
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              TypeScript
+              JavaScript
             </Badge>
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
               Next.js
@@ -112,26 +115,9 @@ export default function Home() {
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
               React
             </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Prisma
-            </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              tRPC
-            </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Clerk
-            </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Planetscale
-            </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              tailwind
-            </Badge>
+
             <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
               Azure
-            </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              PowerApps
             </Badge>
           </div>
         </div>
