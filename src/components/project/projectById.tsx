@@ -16,11 +16,10 @@ import Link from "next/link";
 import { LuArrowLeft } from "react-icons/lu";
 
 export function ProjectById({ id }: { id: string }) {
-  const { data } = api.project.getOne.useQuery({ id: id });
-
-  const { data: relatedProjets } = api.project.getMultiple.useQuery(
-    data?.related,
-  );
+  const { data } = api.project.getByTitle.useQuery(id);
+  const { data: relatedProjets } = api.project.getAll.useQuery(undefined, {
+    enabled: !!data?.title,
+  });
 
   const isProduction = process.env.NODE_ENV === "production";
   return (
@@ -93,9 +92,9 @@ export function ProjectById({ id }: { id: string }) {
             <section>
               <h2 className="text-xl font-bold">Technologies Used</h2>
               <ul className="list-inside list-disc space-y-1">
-                {(data?.techUsed ?? [] ?? []).map((tech, i) => (
+                {/* {(data?.techUsed ?? [] ?? []).map((tech, i) => (
                   <li key={i}>{tech}</li>
-                ))}
+                ))} */}
               </ul>
             </section>
           </div>
@@ -110,7 +109,7 @@ export function ProjectById({ id }: { id: string }) {
               </div>
               <div>
                 <h3 className="font-semibold">Team Members</h3>
-                <p>{data?.Team ? data.Team.join(", ") : ""}</p>
+                {/* <p>{data?.team ? data.team.join(", ") : ""}</p> */}
               </div>
               <div>
                 <h3 className="font-semibold">Category</h3>

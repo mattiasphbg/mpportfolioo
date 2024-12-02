@@ -1,4 +1,4 @@
-import { pgTable, text, jsonb } from "drizzle-orm/pg-core";
+import { pgTable, text, jsonb, serial } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 
 export const mpPortfolio = pgTable("mp_Portfolio", {
@@ -13,4 +13,5 @@ export const mpPortfolio = pgTable("mp_Portfolio", {
   screenshotTwo: text(),
   techUsed: jsonb(),
   related: jsonb(),
+  id: serial().primaryKey().notNull(),
 });
