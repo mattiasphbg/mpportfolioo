@@ -14,6 +14,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { LuArrowLeft } from "react-icons/lu";
+import ZoomableImage from "src/components/ZoomableImage";
 
 export function ProjectById({ id }: { id: string }) {
   const { data } = api.project.getById.useQuery(id);
@@ -62,28 +63,18 @@ export function ProjectById({ id }: { id: string }) {
               <h2 className="text-xl font-bold">Screenshots</h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {data?.screenshotOne && (
-                  <Image
+                  <ZoomableImage
                     alt="Screenshot 1"
-                    className="h-64 w-full rounded-md object-cover"
                     height={2000}
-                    src={data?.screenshotOne}
-                    style={{
-                      aspectRatio: "1/1",
-                      objectFit: "cover",
-                    }}
+                    src={data.screenshotOne}
                     width={2000}
                   />
                 )}
                 {data?.screenshotTwo && (
-                  <Image
+                  <ZoomableImage
                     alt="Screenshot 2"
-                    className="h-64 w-full rounded-md object-cover"
                     height={1000}
-                    src={data?.screenshotTwo}
-                    style={{
-                      aspectRatio: "1/1",
-                      objectFit: "cover",
-                    }}
+                    src={data.screenshotTwo}
                     width={1000}
                   />
                 )}
