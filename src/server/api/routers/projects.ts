@@ -8,9 +8,9 @@ export const projects = createTRPCRouter({
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.db.select().from(mpPortfolio);
   }),
-  getById: publicProcedure.input(z.number()).query(({ ctx, input }) => {
+  getById: publicProcedure.input(z.string()).query(({ ctx, input }) => {
     return ctx.db.query.mpPortfolio.findFirst({
-      where: eq(mpPortfolio.id, input),
+      where: eq(mpPortfolio.id, Number(input)),
     });
   }),
 });
