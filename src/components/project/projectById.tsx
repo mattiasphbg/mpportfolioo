@@ -15,7 +15,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LuArrowLeft } from "react-icons/lu";
 
-export function ProjectById({ id }: { id: string }) {
+export function ProjectById({ id }: { id: number }) {
   const { data } = api.project.getById.useQuery(id);
   const { data: relatedProjets } = api.project.getAll.useQuery(undefined, {
     enabled: !!data?.id,
