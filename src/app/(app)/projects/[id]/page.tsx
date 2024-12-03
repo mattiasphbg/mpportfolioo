@@ -1,9 +1,9 @@
 import { ProjectById } from "src/components/project/projectById";
 
-export default function Page({ params }: { params: { title: string } }) {
+export default function Page({ params }: { params: { id: string } }) {
   return (
     <>
-      <ProjectById id={`${params.title}`} />
+      <ProjectById id={`${params.id}`} />
     </>
   );
 }

@@ -16,9 +16,9 @@ import Link from "next/link";
 import { LuArrowLeft } from "react-icons/lu";
 
 export function ProjectById({ id }: { id: string }) {
-  const { data } = api.project.getByTitle.useQuery(id);
+  const { data } = api.project.getById.useQuery(id);
   const { data: relatedProjets } = api.project.getAll.useQuery(undefined, {
-    enabled: !!data?.title,
+    enabled: !!data?.id,
   });
 
   const isProduction = process.env.NODE_ENV === "production";
