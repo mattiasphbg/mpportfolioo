@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "src/components/ui/button";
-import Image from "next/image";
+import ZoomableImage from "src/components/ZoomableImage";
 import { Skeleton } from "src/components/ui/skeleton";
 
 import {
@@ -76,16 +76,12 @@ export function ListProject() {
     <>
       {data?.map((field, i) => (
         <Card key={i}>
-          <CardHeader className="flex flex-row items-center gap-4">
-            <Image
+          <CardHeader className="flex items-center justify-center gap-4">
+            <ZoomableImage
               alt="Project Image"
-              className="h-20 w-20 rounded-lg object-cover"
+              className="h-400 w-400 aspect-square rounded-lg object-contain"
               height={2000}
               src={`${field.img}`}
-              style={{
-                aspectRatio: "100/100",
-                objectFit: "cover",
-              }}
               width={2000}
             />
             <div className="grid gap-1">
@@ -105,7 +101,7 @@ export function ListProject() {
                 </Link>
               ) : (
                 <Link href={`http://localhost:3000/projects/${field.id}`}>
-                  <Button className="mt-4" variant="outline">
+                  <Button className="m-4" variant="outline">
                     View details
                   </Button>
                 </Link>

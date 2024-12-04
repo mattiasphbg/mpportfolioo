@@ -9,9 +9,16 @@ type ZoomableImageProps = {
   alt: string;
   width: number;
   height: number;
+  className?: string;
 };
 
-const ZoomableImage = ({ src, alt, width, height }: ZoomableImageProps) => {
+const ZoomableImage = ({
+  src,
+  alt,
+  width,
+  height,
+  className,
+}: ZoomableImageProps) => {
   return (
     <Zoom>
       <Image
@@ -19,7 +26,7 @@ const ZoomableImage = ({ src, alt, width, height }: ZoomableImageProps) => {
         alt={alt}
         width={width}
         height={height}
-        style={{ objectFit: "cover", cursor: "zoom-in" }}
+        className={className}
       />
     </Zoom>
   );

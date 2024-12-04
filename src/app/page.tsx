@@ -7,8 +7,7 @@ import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
 import { TbBrandGithubCopilot } from "react-icons/tb";
 
 import { HireMeSection } from "src/components/hireMe/hireMeSection";
-
-import Image from "next/image";
+import ZoomableImage from "src/components/ZoomableImage";
 
 export default function Home() {
   return (
@@ -46,13 +45,12 @@ export default function Home() {
                 <h3 className="text-xl font-bold">One Bridge</h3>
               </CardHeader>
               <CardContent>
-                <Image
+                <ZoomableImage
                   alt="Project 1"
                   className="h-[200px] w-full object-cover"
                   src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704802806/portfolio/oneBridge_new_four_nccgsh.png"
-                  layout="responsive"
-                  width={200}
-                  height={200}
+                  width={2000}
+                  height={2000}
                 />
                 <p className="mt-4 text-gray-500">all-in-one HR solution</p>
               </CardContent>
@@ -62,13 +60,12 @@ export default function Home() {
                 <h3 className="text-xl font-bold">Thoughtful-gallery</h3>
               </CardHeader>
               <CardContent>
-                <Image
+                <ZoomableImage
                   alt="Project 2"
                   className="h-[200px] w-full object-cover"
                   src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1703675151/portfolio/msedge_IHbU7dlQH8_rav4fg.jpg"
-                  layout="responsive"
-                  width={200}
-                  height={200}
+                  width={2000}
+                  height={2000}
                 />
                 <p className="mt-4 text-gray-500">
                   Isn't it fascinating to be able to explore world history?
@@ -80,13 +77,12 @@ export default function Home() {
                 <h3 className="text-xl font-bold">HaBygg Onboarding</h3>
               </CardHeader>
               <CardContent>
-                <Image
+                <ZoomableImage
                   alt="Project 3"
                   className="h-[200px] w-full object-cover"
                   src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704806874/portfolio/habygg_cgjwkx.png"
-                  layout="responsive"
-                  width={200}
-                  height={200}
+                  width={2000}
+                  height={2000}
                 />
                 <p className="mt-4 text-gray-500">
                   Streamlining the process to make new employee integration a
