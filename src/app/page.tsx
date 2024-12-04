@@ -9,161 +9,86 @@ import { TbBrandGithubCopilot } from "react-icons/tb";
 import { HireMeSection } from "src/components/hireMe/hireMeSection";
 import ZoomableImage from "src/components/ZoomableImage";
 
+import { Button } from "src/components/ui/button";
+import { User, MessageSquare } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
-      <HireMeSection
+      {/* <HireMeSection
         title="Welcome"
         subTitles="My name is Mattias, and I'm a passionate full-stack developer driven by the desire to create anything I imagine."
-      />
-      <section className="w-full py-12 md:py-24 lg:py-32" id="about">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            About Me
-          </h2>
-          <p className="mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
-            Driven full-stack developer with 3+ years of experience in
-            full-stack development. I help companies optimize their processes by
-            developing innovative solutions that increase efficiency and
-            productivity. For example, I created a system for the sales
-            department to analyze and compare sales from previous months,
-            leading to better strategic decisions.
-          </p>
-        </div>
-      </section>
-      <section
-        className="w-full bg-gray-100 py-12 dark:bg-gray-800 md:py-24 lg:py-32"
-        id="projects"
-      >
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Projects
-          </h2>
-          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="shadow-lg">
-              <CardHeader>
-                <h3 className="text-xl font-bold">One Bridge</h3>
-              </CardHeader>
-              <CardContent>
-                <ZoomableImage
-                  alt="Project 1"
-                  className="h-[200px] w-full object-cover"
-                  src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704802806/portfolio/oneBridge_new_four_nccgsh.png"
-                  width={2000}
-                  height={2000}
-                />
-                <p className="mt-4 text-gray-500">all-in-one HR solution</p>
-              </CardContent>
-            </Card>
-            <Card className="shadow-lg">
-              <CardHeader>
-                <h3 className="text-xl font-bold">Thoughtful-gallery</h3>
-              </CardHeader>
-              <CardContent>
-                <ZoomableImage
-                  alt="Project 2"
-                  className="h-[200px] w-full object-cover"
-                  src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1703675151/portfolio/msedge_IHbU7dlQH8_rav4fg.jpg"
-                  width={2000}
-                  height={2000}
-                />
-                <p className="mt-4 text-gray-500">
-                  Isn't it fascinating to be able to explore world history?
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="shadow-lg">
-              <CardHeader>
-                <h3 className="text-xl font-bold">HaBygg Onboarding</h3>
-              </CardHeader>
-              <CardContent>
-                <ZoomableImage
-                  alt="Project 3"
-                  className="h-[200px] w-full object-cover"
-                  src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704806874/portfolio/habygg_cgjwkx.png"
-                  width={2000}
-                  height={2000}
-                />
-                <p className="mt-4 text-gray-500">
-                  Streamlining the process to make new employee integration a
-                  breeze.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-      <section className="w-full py-12 md:py-24 lg:py-32" id="skills">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Skills
-          </h2>
-          <div className="mt-8 flex flex-wrap items-center space-x-4">
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              TypeScript
-            </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              JavaScript
-            </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Next.js
-            </Badge>
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              React
-            </Badge>
+      /> */}
+      <div className="min-h-screen bg-black text-white">
+        {/* Navigation */}
+        <nav className="fixed top-0 z-50 flex w-full items-center justify-between p-6">
+          <Button variant="ghost" size="icon" className="rounded-full">
+            <User className="h-5 w-5" />
+            <span className="sr-only">Profile</span>
+          </Button>
+          <Button variant="ghost" size="icon" className="rounded-full">
+            <MessageSquare className="h-5 w-5" />
+            <span className="sr-only">Contact</span>
+          </Button>
+        </nav>
 
-            <Badge className="rounded bg-blue-200 px-2 py-1 text-blue-700">
-              Azure
-            </Badge>
-          </div>
-        </div>
-      </section>
-      <section
-        className="w-full bg-gray-100 py-12 dark:bg-gray-800  md:py-12 lg:py-16"
-        id="contact"
-      >
-        <div className="container px-4 text-center md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Contact Me
-          </h2>
-          <p className="mx-auto mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
-            Have a project in mind? Let's make something great together. Get in
-            touch with me.
-          </p>
-          <div className="mt-8 flex justify-center space-x-4">
-            <a
-              className="text-gray-500 hover:text-blue-600"
-              href="https://www.linkedin.com/in/mattias-pettersson-a97b05184/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <FaLinkedinIn className="h-6 w-6" />
-              <span className="sr-only">LinkedIn</span>
-            </a>
-            <a
-              className="text-gray-500 hover:text-blue-600"
-              href="https://discord.com/users/253514757565448193"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <FaDiscord className="h-6 w-6" />
+        {/* Main Content */}
+        <main className="flex min-h-screen flex-col items-center justify-center px-4">
+          <div className="relative mx-auto w-full max-w-6xl">
+            {/* Profile Image */}
+            <div className="relative mb-8 aspect-[2/1] w-full">
+              <Image
+                src="/placeholder.svg"
+                alt="Profile"
+                fill
+                className="rounded-2xl object-cover opacity-75 grayscale"
+                priority
+              />
+            </div>
 
-              <span className="sr-only">Discord</span>
-            </a>
-            <a
-              className="text-gray-500 hover:text-blue-600"
-              href="https://github.com/mattiasphbg
-    "
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <TbBrandGithubCopilot className="h-6 w-6" />
-
-              <span className="sr-only">GitHub</span>
-            </a>
+            {/* Name and Title */}
+            <div className="space-y-4 text-center">
+              <h1 className="bg-gradient-to-b from-white to-pink-200 bg-clip-text text-6xl font-bold tracking-tighter text-transparent sm:text-8xl">
+                Mattias Pettersson
+              </h1>
+              <p className="text-xl text-zinc-400 sm:text-2xl">
+                Full-Stack Developer / Engineer
+              </p>
+              <div className="pt-4">
+                <Button
+                  asChild
+                  className="rounded-full bg-white px-6 text-black hover:bg-zinc-200"
+                >
+                  <Link href="/contact">Get in touch →</Link>
+                </Button>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+
+          {/* Scroll Indicator */}
+          <div className="fixed bottom-8 left-1/2 -translate-x-1/2">
+            <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/20 p-1">
+              <div className="h-2 w-1 animate-bounce rounded-full bg-white/60" />
+            </div>
+          </div>
+        </main>
+
+        <section className="w-full py-12 md:py-24 lg:py-32" id="about">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              About Me
+            </h2>
+            <p className="mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
+              Driven full-stack developer with 3+ years of experience. I create
+              innovative solutions to optimize processes and boost productivity.
+              For example, I developed a sales analysis system that improved
+              strategic decision-making.
+            </p>
+          </div>
+        </section>
+      </div>
     </>
   );
 }
