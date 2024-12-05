@@ -38,12 +38,12 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center justify-center px-4">
           <div className="relative mx-auto w-full max-w-6xl">
             {/* Profile Image */}
-            <div className="relative mb-8 aspect-[2/1] w-full">
+            <div className="relative mb-8 aspect-[3/1] w-full">
               <Image
-                src="/placeholder.svg"
+                src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704200614/portfolio/Mp_hgd92f.png"
                 alt="Profile"
                 fill
-                className="rounded-2xl object-cover opacity-75 grayscale"
+                className=" rounded-2xl object-contain  opacity-75 grayscale"
                 priority
               />
             </div>
