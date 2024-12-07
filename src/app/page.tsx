@@ -14,7 +14,6 @@ import { User, MessageSquare } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-
 export default function Home() {
   return (
     <>
@@ -41,12 +40,26 @@ export default function Home() {
             {/* Profile Image */}
             <div className="relative mb-8 aspect-[3/1] w-full">
               <Image
-                src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1704200614/portfolio/Mp_hgd92f.png"
-                alt="Profile"
+                src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1733568757/661004790ba41b1c6ba1fd12_hero_background-p-500_pmgup4.webp" // Replace with your wrapper image URL
+                alt="Wrapper Image"
                 fill
-                className=" rounded-2xl object-contain  opacity-75 grayscale"
+                className="object-cover" // or object-contain, depending on desired effect
+                sizes="100vw"
                 priority
               />
+              <div className="absolute inset-0">
+                {" "}
+                {/* Container for the profile image and overlay */}
+                <Image
+                  src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1733567572/Mp_hgd92f__1_-removebg_g48ete.png"
+                  alt="Profile"
+                  fill
+                  className="object-contain opacity-75 grayscale"
+                  sizes="100vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-500 to-gray-500 opacity-50 mix-blend-multiply"></div>
+              </div>
             </div>
 
             {/* Name and Title */}
