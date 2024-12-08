@@ -43,7 +43,7 @@ export default function Home() {
                 src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1733568757/661004790ba41b1c6ba1fd12_hero_background-p-500_pmgup4.webp" // Replace with your wrapper image URL
                 alt="Wrapper Image"
                 fill
-                className="object-cover" // or object-contain, depending on desired effect
+                className="rounded-2xl object-cover"
                 sizes="100vw"
                 priority
               />
