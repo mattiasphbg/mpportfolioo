@@ -13,6 +13,9 @@ import { Button } from "src/components/ui/button";
 import { User, MessageSquare } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import AboutSection from "~/components/landing/aboutMe";
+import WorkWithSection from "~/components/landing/oftenWork";
+import WorkedWith from "~/components/landing/workedWith";
 
 export default function Home() {
   return (
@@ -89,19 +92,9 @@ export default function Home() {
           </div>
         </main>
 
-        <section className="w-full py-12 md:py-24 lg:py-32" id="about">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              About Me
-            </h2>
-            <p className="mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
-              Driven full-stack developer with 3+ years of experience. I create
-              innovative solutions to optimize processes and boost productivity.
-              For example, I developed a sales analysis system that improved
-              strategic decision-making.
-            </p>
-          </div>
-        </section>
+        <AboutSection />
+        <WorkWithSection />
+        <WorkedWith />
       </div>
     </>
   );
