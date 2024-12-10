@@ -16,8 +16,35 @@ import Image from "next/image";
 import AboutSection from "~/components/landing/aboutMe";
 import WorkWithSection from "~/components/landing/oftenWork";
 import WorkedWith from "~/components/landing/workedWith";
+import LatestProjects from "~/components/landing/latestProjects";
 
 export default function Home() {
+  const projects = [
+    {
+      id: "1",
+      title: "FITP portalen",
+      description: "Make Also analytics esier",
+      imageUrl:
+        "https://res.cloudinary.com/dxhfq1g84/image/upload/v1733821397/fitp_portalend_o5lmso.png",
+      link: "https://fitp-also-portal-beta.vercel.app/",
+    },
+    {
+      id: "2",
+      title: "OneBridge",
+      description: "Making hr-system easier.",
+      imageUrl:
+        "https://res.cloudinary.com/dxhfq1g84/image/upload/v1704802807/portfolio/oneBridge_new_three_cxsfug.png",
+      link: "https://www.onebridge.se/",
+    },
+    {
+      id: "3",
+      title: "Habygg",
+      description: "Personalized Hr-system.",
+      imageUrl:
+        "https://res.cloudinary.com/dxhfq1g84/image/upload/v1704807172/portfolio/habygg_2_ybzgmn.png",
+      link: "https://habygg.com/",
+    },
+  ];
   return (
     <>
       {/* <HireMeSection
@@ -95,6 +122,7 @@ export default function Home() {
         <AboutSection />
         <WorkWithSection />
         <WorkedWith />
+        <LatestProjects projects={projects} />
       </div>
     </>
   );
