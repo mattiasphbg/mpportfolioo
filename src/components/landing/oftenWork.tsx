@@ -34,8 +34,8 @@ export default function WorkWithSection() {
   };
 
   return (
-    <section className="flex min-h-screen items-center justify-center bg-zinc-900 p-4 text-white">
-      <div className="w-full max-w-4xl">
+    <section className="flex min-h-screen items-center justify-center bg-black p-4 text-white">
+      <div className="w-full max-w-4xl ">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -53,7 +53,7 @@ export default function WorkWithSection() {
               <motion.div key={item.title} variants={itemVariants}>
                 <Link
                   href={item.href}
-                  className="group flex items-center justify-between rounded-lg p-4 text-xl transition-colors duration-200 hover:bg-zinc-800 md:text-2xl"
+                  className="group flex items-center justify-between rounded-lg border border-zinc-800 p-4 text-xl transition-colors duration-200 hover:bg-zinc-800 md:text-2xl"
                 >
                   <span>{item.title}</span>
                   <ArrowUpRight
