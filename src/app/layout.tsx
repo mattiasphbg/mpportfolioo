@@ -1,7 +1,6 @@
 import "~/styles/globals.css";
 import React from "react";
 import { ThemeProvider } from "src/components/theme-provider";
-import Header from "src/components/Header";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { cookies } from "next/headers";
@@ -37,7 +36,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
+            {/* <Header /> */}
             <TRPCReactProvider cookies={cookieString}>
               {children}
             </TRPCReactProvider>

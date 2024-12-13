@@ -10,8 +10,6 @@ import WorkedWith from "~/components/landing/workedWith";
 import LatestProjects from "~/components/landing/latestProjects";
 import ContactSection from "~/components/landing/getInTouch";
 
-///
-
 export default function Home() {
   const projects = [
     {
@@ -64,9 +62,9 @@ export default function Home() {
             {/* Profile Image */}
             <div className="relative mb-8 aspect-[3/1] w-full">
               <Image
-                src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1733568757/661004790ba41b1c6ba1fd12_hero_background-p-500_pmgup4.webp" // Replace with your wrapper image URL
+                src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1733568757/661004790ba41b1c6ba1fd12_hero_background-p-500_pmgup4.webp"
                 alt="Wrapper Image"
-                fill
+                fill={true}
                 className="rounded-2xl object-cover"
                 sizes="100vw"
                 priority
@@ -77,7 +75,7 @@ export default function Home() {
                 <Image
                   src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1733567572/Mp_hgd92f__1_-removebg_g48ete.png"
                   alt="Profile"
-                  fill
+                  fill={true}
                   className="object-contain opacity-75 grayscale"
                   sizes="100vw"
                   priority

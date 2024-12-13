@@ -60,6 +60,7 @@ export default function ParallaxProjects({ projects }: ParallaxProjectsProps) {
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
+                    fill={true}
                     className="h-full w-full object-cover"
                   />
                 </div>
