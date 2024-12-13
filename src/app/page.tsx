@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "src/components/ui/button";
-import { User, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import AboutSection from "~/components/landing/aboutMe";
@@ -47,11 +47,19 @@ export default function Home() {
         {/* Navigation */}
         <nav className="fixed top-0 z-50 flex w-full items-center justify-between p-6">
           <Button variant="ghost" size="icon" className="rounded-full">
-            <User className="h-5 w-5" />
+            <Image
+              src="https://res.cloudinary.com/dxhfq1g84/image/upload/v1733567572/Mp_hgd92f__1_-removebg_g48ete.png" // Replace with the actual path to your profile image
+              alt="Profile"
+              className="h-5 w-5 rounded-full"
+              width={5}
+              height={5}
+            />
             <span className="sr-only">Profile</span>
           </Button>
+
           <Button variant="ghost" size="icon" className="rounded-full">
-            <MessageSquare className="h-5 w-5" />
+            <MessageSquare children className="h-5 w-5" />
+
             <span className="sr-only">Contact</span>
           </Button>
         </nav>

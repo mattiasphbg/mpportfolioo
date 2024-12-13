@@ -21,7 +21,7 @@ export default function ParallaxProjects({ projects }: ParallaxProjectsProps) {
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="py-20 text-center text-7xl font-bold text-[#ffcad4] md:text-8xl"
+        className="py-20 text-center text-7xl font-bold text-[#f5f5f5] md:text-8xl"
       >
         LATEST WORK
       </motion.h1>

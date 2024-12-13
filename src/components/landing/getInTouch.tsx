@@ -9,12 +9,12 @@ export default function ContactSection() {
           GET IN TOUCH
         </span>
       </h1>
-      <Link href="mailto:hi@jameswilliams.design">
+      <Link href="mailto:mattiasp@hotmail.com">
         <Button
           variant="outline"
           className="rounded-full border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:bg-neutral-900 hover:text-white"
         >
-          hi@mattiaspettersson.se
+          mattiasp@hotmail.com
         </Button>
       </Link>
     </div>
