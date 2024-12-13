@@ -11,7 +11,6 @@ import {
   Card,
 } from "src/components/ui/card";
 
-import Image from "next/image";
 import Link from "next/link";
 import { LuArrowLeft } from "react-icons/lu";
 import ZoomableImage from "src/components/ZoomableImage";

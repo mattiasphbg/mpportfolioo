@@ -1,5 +1,4 @@
 import { pgTable, text, jsonb, serial } from "drizzle-orm/pg-core";
-import { sql } from "drizzle-orm";
 
 export const mpPortfolio = pgTable("mp_Portfolio", {
   title: text(),

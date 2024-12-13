@@ -1,16 +1,15 @@
 /** @type {import("eslint").Linter.Config} */
-import perfectionist from "eslint-plugin-perfectionist";
+
 const config = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,
   },
-  plugins: ["@typescript-eslint", perfectionist],
+  plugins: ["@typescript-eslint"],
   extends: [
     "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
-    perfectionist.configs["recommended-alphabetical"],
   ],
   rules: {
     // These opinionated rules are enabled in stylistic-type-checked above.

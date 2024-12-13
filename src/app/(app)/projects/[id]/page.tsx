@@ -1,13 +1,14 @@
 import { ProjectById } from "src/components/project/projectById";
 
-interface PageProps<T> {
-  params: T;
-}
-
-export default function Page({ params }: PageProps<{ id: string }>) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const slug = (await params).id;
   return (
     <>
-      <ProjectById id={params.id} />
+      <ProjectById id={slug} />
     </>
   );
 }

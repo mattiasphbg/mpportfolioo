@@ -22,6 +22,7 @@ import { transformer } from "./shared";
 const createContext = cache(() => {
   return createTRPCContext({
     headers: new Headers({
+      // eslint-disable-next-line @typescript-eslint/no-base-to-string
       cookie: cookies().toString(),
       "x-trpc-source": "rsc",
     }),

@@ -3,8 +3,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { Project } from "src/types/project";
-
+import { type Project } from "src/types/project";
+import Image from "next/image";
 interface ParallaxProjectsProps {
   projects: Project[];
 }
@@ -57,7 +57,7 @@ export default function ParallaxProjects({ projects }: ParallaxProjectsProps) {
                   </button>
                 </div>
                 <div className="relative h-[300px] md:h-[400px]">
-                  <img
+                  <Image
                     src={project.imageUrl}
                     alt={project.title}
                     className="h-full w-full object-cover"

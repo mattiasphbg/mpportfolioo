@@ -1,14 +1,5 @@
 import React from "react";
 
-import { CardHeader, CardContent, Card } from "src/components/ui/card";
-import { Badge } from "src/components/ui/badge";
-
-import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
-import { TbBrandGithubCopilot } from "react-icons/tb";
-
-import { HireMeSection } from "src/components/hireMe/hireMeSection";
-import ZoomableImage from "src/components/ZoomableImage";
-
 import { Button } from "src/components/ui/button";
 import { User, MessageSquare } from "lucide-react";
 import Link from "next/link";
@@ -18,6 +9,8 @@ import WorkWithSection from "~/components/landing/oftenWork";
 import WorkedWith from "~/components/landing/workedWith";
 import LatestProjects from "~/components/landing/latestProjects";
 import ContactSection from "~/components/landing/getInTouch";
+
+///
 
 export default function Home() {
   const projects = [

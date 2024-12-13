@@ -1,4 +1,3 @@
-import { Mail } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "src/components/ui/avatar";
 import { Badge } from "src/components/ui/badge";
 import {

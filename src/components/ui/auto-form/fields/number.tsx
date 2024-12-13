@@ -1,18 +1,18 @@
-import { AutoFormInputComponentProps } from "../types";
+import { type AutoFormInputComponentProps } from "../types";
 import AutoFormInput from "./input";
 
 export default function AutoFormNumber({
-    fieldProps,
-    ...props
+  fieldProps,
+  ...props
 }: AutoFormInputComponentProps) {
-    return (
-        <AutoFormInput
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-            fieldProps={{
-                type: "number",
-                ...fieldProps,
-            }}
-            {...props}
-        />
-    );
+  return (
+    <AutoFormInput
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      fieldProps={{
+        type: "number",
+        ...fieldProps,
+      }}
+      {...props}
+    />
+  );
 }
