@@ -7,9 +7,9 @@ import Link from "next/link";
 export default function WorkWithSection() {
   const items = [
     { title: "Startups", href: "#startups" },
-    { title: "Marketing teams", href: "#marketing" },
-    { title: "Sells teams", href: "#agencies" },
     { title: "SaaS", href: "#saas" },
+    { title: "Marketing teams", href: "#agencies" },
+    { title: "Sales team", href: "#marketing" },
   ];
 
   const containerVariants = {

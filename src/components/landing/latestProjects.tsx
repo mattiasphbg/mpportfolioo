@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { type Project } from "src/types/project";
 import Image from "next/image";
+import Link from "next/link";
+
 interface ParallaxProjectsProps {
   projects: Project[];
 }
@@ -52,9 +54,11 @@ export default function ParallaxProjects({ projects }: ParallaxProjectsProps) {
                   <h2 className="text-3xl font-semibold text-white">
                     {project.title}
                   </h2>
-                  <button className="rounded-full p-2 text-white transition-colors hover:bg-zinc-800">
-                    <ArrowUpRight className="h-6 w-6" />
-                  </button>
+                  <Link href={`${project.link}`} target="_blank">
+                    <button className="rounded-full p-2 text-white transition-colors hover:bg-zinc-800">
+                      <ArrowUpRight className="h-6 w-6" />
+                    </button>
+                  </Link>
                 </div>
                 <div className="relative h-[300px] md:h-[400px]">
                   <Image
