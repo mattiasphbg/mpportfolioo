@@ -9,7 +9,7 @@ import WorkWithSection from "~/components/landing/oftenWork";
 import WorkedWith from "~/components/landing/workedWith";
 import LatestProjects from "~/components/landing/latestProjects";
 import ContactSection from "~/components/landing/getInTouch";
-
+///
 export default function Home() {
   const projects = [
     {
