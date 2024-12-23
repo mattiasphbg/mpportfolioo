@@ -9,7 +9,8 @@ import WorkWithSection from "~/components/landing/oftenWork";
 import WorkedWith from "~/components/landing/workedWith";
 import LatestProjects from "~/components/landing/latestProjects";
 import ContactSection from "~/components/landing/getInTouch";
-///
+import { ProjectStory } from "~/components/landing/projectStory";
+
 export default function Home() {
   const projects = [
     {
@@ -122,6 +123,62 @@ export default function Home() {
             </div>
           </div>
         </main>
+
+        <ProjectStory
+          title="FITP PORTALEN Storytelling: Future IT Partner's Journey"
+          context="Future IT Partner faced challenges with their portal for licenses and packaging."
+          role="As a developer, I was the main person responsible for addressing these challenges."
+          challenge="There were issues with billing due to errors in licenses and packaging."
+          objectives={[
+            "Find a way to easily identify any changes in the system.",
+            "Automate processes as much as possible to minimize errors.",
+            "Implement a new, user-friendly design",
+            "Integrate with existing billing management systems",
+          ]}
+          research="To create a successful project, identify the client's needs, structure the project effectively, and determine which tools and resources to integrate."
+          strategy="Schedule a meeting with the client to discuss their specific needs and tailor a solution for them by utilizing resources like Google and ChatGPT for additional insights, and break down the project into manageable parts."
+          process={[
+            "Requirements gathering and user research",
+            "Wireframing and prototyping",
+            "Development of core features",
+            "A table with a color-coded column to indicate license status",
+            "Save the state of licenses each month.",
+            "Exclude certain licenses from the list using PowerBI",
+            "Create a dedicated page for packaging, allowing companies to expand with their employees and various packages.",
+            "Compare the licenses with the current state of the licenses in the system.",
+          ]}
+          tools={[
+            "React for the front-end",
+            "Lodash for data manipulation",
+            "Inngest for logging",
+            "Tanstack for listing and filtering",
+          ]}
+          challenges={[
+            {
+              obstacle: "Comparing current data with previous data.",
+              solution:
+                "To solve the Lodash part of the code, I utilized functions like _.differenceWith, _.omit, and _.isEqual to efficiently compare and manipulate data sets, allowing me to identify added, deleted, and edited rows by filtering and tagging records based on custom criteria.",
+            },
+            {
+              obstacle: "Ensuring the API functions correctly.",
+              solution:
+                "Used an API from a different region, switching to the European URL: https://marketplace.also.se/SimpleAPI/SimpleAPIService.svc/rest/",
+            },
+          ]}
+          outcomes={[
+            "The project met its objectives by enabling accurate billing at each accounting period.",
+            "The system was designed to be user-friendly.",
+            "Implemented a serverless database to store monthly data snapshots.",
+          ]}
+          impact="Billing errors have significantly decreased because clients can now quickly identify errors before invoices are sent out."
+          lessons={[
+            "Scalability is crucial, as client needs are constantly evolving.",
+            "Both backend and frontend should be kept simple, following the 'Don't Make Me Think' approach.",
+          ]}
+          improvements="In the future, I would use fewer useEffect/useState hooks and rely more on React Query for better performance, as it caches data when the page re-renders if the data hasn't changed."
+          summary="The transition from billing issues to improved revenue shows the success of this project."
+          callToAction="If you have any suggestions for further improvement, please feel free to email us, as our goal is to create the best system possible."
+        />
 
         <AboutSection />
         <WorkWithSection />
