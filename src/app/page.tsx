@@ -125,8 +125,8 @@ export default function Home() {
         </main>
 
         <ProjectStory
-          title="FITP PORTALEN Storytelling: Future IT Partner's Journey"
-          context="Future IT Partner faced challenges with their portal for licenses and packaging."
+          title="FITP PORTALEN: Future IT Partner's Invoice Management Journey"
+          context="Future IT Partner faced challenges with their invoices for licenses and packaging."
           role="As a developer, I was the main person responsible for addressing these challenges."
           challenge="There were issues with billing due to errors in licenses and packaging."
           objectives={[
