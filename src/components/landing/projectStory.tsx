@@ -75,7 +75,7 @@ export function ProjectStory({
   };
 
   return (
-    <section className="flex min-h-screen items-center justify-center bg-black p-4 text-white">
+    <section className="flex min-h-screen items-center justify-center  p-4 text-white">
       <Card className="mx-auto w-full max-w-4xl bg-transparent">
         <CardHeader>
           <motion.div
@@ -227,7 +227,9 @@ export function ProjectStory({
               },
             ].map(({ value, title, content }, index) => (
               <AccordionItem key={value} value={value}>
-                <AccordionTrigger>{title}</AccordionTrigger>
+                <AccordionTrigger className="flex items-center justify-between border border-zinc-800 p-4 text-xl transition-colors duration-200 hover:bg-zinc-800 md:text-2xl">
+                  {title}
+                </AccordionTrigger>
                 <AccordionContent>
                   <motion.div
                     initial="hidden"
