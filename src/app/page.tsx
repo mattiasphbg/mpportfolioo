@@ -180,6 +180,43 @@ export default function Home() {
           callToAction="If you have any suggestions for further improvement, please feel free to email us, as our goal is to create the best system possible."
         />
 
+        <ProjectStory
+          title="From Concept to Reality: Adding MFA to Docuro's Document Management System"
+          context="Docuro is a document management system. The client needed Multi-Factor Authentication (MFA) added because their customers wanted increased security."
+          role="Development Lead: Decide on the tools we should use."
+          challenge="Ensure users can log in with their Microsoft business accounts and then find them in Docuro's personal database. There was no PHP support from Microsoft at the time this was implemented."
+          objectives={[
+            "Enable users to select their Microsoft account with a single button click. The icons should be user-customized.",
+          ]}
+          research="Familiarize yourself with their system while exploring the possibilities available in Laravel and investigating the options provided by Microsoft."
+          strategy="Use the Microsoft Graph API and create controllers."
+          process={[
+            "Set up a local Docker container.",
+            "Connect Docuro properties with Microsoft.",
+            "Create a component with the option to log in using a Microsoft account.",
+          ]}
+          tools={["Microsoft Graph", "Laravel userController"]}
+          challenges={[
+            {
+              obstacle: "Setting up Docker Compose.",
+              solution:
+                "Need to add new requirements for composers new updates to the system. Which had new naming conventions.",
+            },
+          ]}
+          outcomes={[
+            "Users can now use their regular Microsoft account with Docuro's system.",
+            "There wasn't enough time to add Google integration.",
+            "The integration was seamlessly incorporated with existing systems.",
+          ]}
+          impact="The client's needs were met as desired."
+          lessons={[
+            "It's important to have plans prepared as early as possible.",
+          ]}
+          improvements="Ask more questions from the project creator, which saves time."
+          summary="Expanding their system with MFA was both rewarding and educational. It involved learning how PHP works instead of TypeScript while also delivering what the client needed."
+          callToAction="If you have any suggestions for further improvement, please feel free to email us, as our goal is to create the best system possible."
+        />
+
         <AboutSection />
         <WorkWithSection />
         <WorkedWith />
