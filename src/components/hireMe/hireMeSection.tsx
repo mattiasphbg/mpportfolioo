@@ -75,7 +75,7 @@ export function HireMeSection({
                     );
                     formData.append("phone", `${submittedValues.phoneNumber}`);
 
-                    fetch("https://www.petterssoncreative.se/api/send", {
+                    fetch("/api/send", {
                       method: "POST",
                       body: formData,
                     })
