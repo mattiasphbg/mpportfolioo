@@ -97,7 +97,7 @@ export function ProjectStory({
                 title: "Introduction",
                 content: (
                   <>
-                    <p className="mb-2">
+                    <p className="my-2">
                       <strong>Context:</strong> {context}
                     </p>
                     <p>
@@ -111,11 +111,11 @@ export function ProjectStory({
                 title: "The Problem",
                 content: (
                   <>
-                    <p className="mb-2">
+                    <p className="my-2">
                       <strong>Challenge:</strong> {challenge}
                     </p>
                     <strong>Objectives:</strong>
-                    <ul className="mt-1 list-disc pl-5">
+                    <ul className="mt-2 list-disc pl-5">
                       {objectives.map((objective, index) => (
                         <li key={index}>{objective}</li>
                       ))}
@@ -128,7 +128,7 @@ export function ProjectStory({
                 title: "Approach",
                 content: (
                   <>
-                    <p className="mb-2">
+                    <p className="my-2">
                       <strong>Research and Planning:</strong> {research}
                     </p>
                     <p>
@@ -142,13 +142,21 @@ export function ProjectStory({
                 title: "Execution",
                 content: (
                   <>
-                    <strong>Process:</strong>
-                    <ol className="mb-2 mt-1 list-decimal pl-5">
+                    {/* 
+                      The `mt-2` (margin-top) utility on <strong> does not have a visible effect 
+                      because <strong> is an inline element by default, and margin-top/bottom 
+                      does not apply to inline elements. To make margin utilities work, 
+                      use block or inline-block display.
+                    */}
+                    <strong className="mt-2 block">Process:</strong>
+                    <ol className="my-2 list-decimal pl-5">
                       {process.map((step, index) => (
                         <li key={index}>{step}</li>
                       ))}
                     </ol>
-                    <strong>Tools and Techniques:</strong>
+                    <strong className="mt-2 block">
+                      Tools and Techniques:
+                    </strong>
                     <ul className="mt-1 list-disc pl-5">
                       {tools.map((tool, index) => (
                         <li key={index}>{tool}</li>
@@ -163,7 +171,7 @@ export function ProjectStory({
                 content: (
                   <>
                     {challenges.map((item, index) => (
-                      <div key={index} className="mb-2">
+                      <div key={index} className="my-2">
                         <p>
                           <strong>Obstacle:</strong> {item.obstacle}
                         </p>
@@ -180,8 +188,8 @@ export function ProjectStory({
                 title: "Results",
                 content: (
                   <>
-                    <strong>Outcomes:</strong>
-                    <ul className="mb-2 mt-1 list-disc pl-5">
+                    <strong className="mt-2 block">Outcomes:</strong>
+                    <ul className="my-2 list-disc pl-5">
                       {outcomes.map((outcome, index) => (
                         <li key={index}>{outcome}</li>
                       ))}
@@ -197,8 +205,8 @@ export function ProjectStory({
                 title: "Lessons Learned",
                 content: (
                   <>
-                    <strong>Insights:</strong>
-                    <ul className="mb-2 mt-1 list-disc pl-5">
+                    <strong className="mt-2 block">Insights:</strong>
+                    <ul className="my-2 list-disc pl-5">
                       {lessons.map((lesson, index) => (
                         <li key={index}>{lesson}</li>
                       ))}
@@ -214,7 +222,7 @@ export function ProjectStory({
                 title: "Conclusion",
                 content: (
                   <>
-                    <p className="mb-2">
+                    <p className="my-2">
                       <strong>Summary:</strong> {summary}
                     </p>
                     {callToAction && (
