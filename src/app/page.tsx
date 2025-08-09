@@ -103,7 +103,11 @@ export default function Home() {
                 Mattias Pettersson
               </h1>
               <p className="text-xl text-zinc-400 sm:text-2xl">
-                Full-Stack Developer / Engineer
+                Full-stack developer specializing in building and automating
+                cloud-native solutions on Microsoft Azure. My passion lies in
+                bridging the gap between development and operations, creating
+                efficient CI/CD workflows and robust applications that solve
+                real business challenges.
               </p>
               <div className="pt-4">
                 <Button
