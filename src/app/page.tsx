@@ -10,6 +10,8 @@ import WorkedWith from "~/components/landing/workedWith";
 import LatestProjects from "~/components/landing/latestProjects";
 import ContactSection from "~/components/landing/getInTouch";
 import { ProjectStory } from "~/components/landing/projectStory";
+import { HireMeSection } from "~/components/hireMe/hireMeSection";
+import { HireMeButton } from "~/components/hireMe/hireMeButton";
 
 export default function Home() {
   const projects = [
@@ -40,10 +42,6 @@ export default function Home() {
   ];
   return (
     <>
-      {/* <HireMeSection
-        title="Welcome"
-        subTitles="My name is Mattias, and I'm a passionate full-stack developer driven by the desire to create anything I imagine."
-      /> */}
       <div className="min-h-screen bg-black text-white">
         {/* Navigation */}
         <nav className="fixed top-0 z-50 flex w-full items-center justify-between p-6">
@@ -110,12 +108,15 @@ export default function Home() {
                 real business challenges.
               </p>
               <div className="pt-4">
+                <HireMeButton>conctact</HireMeButton>
+
+                {/* 
                 <Button
                   asChild
                   className="rounded-full bg-white px-6 text-black hover:bg-zinc-200"
                 >
                   <Link href="/contact">Get in touch →</Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
