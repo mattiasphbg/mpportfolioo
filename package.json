@@ -38,7 +38,7 @@
     "@trpc/client": "11.4.4",
     "@trpc/next": "11.4.4",
     "@trpc/react-query": "11.4.4",
-    "@trpc/server": "^10.45.2",
+    "@trpc/server": "^11.4.4",
     "@vercel/analytics": "^1.1.1",
     "caniuse-lite": "^1.0.30001733",
     "class-variance-authority": "^0.7.0",
