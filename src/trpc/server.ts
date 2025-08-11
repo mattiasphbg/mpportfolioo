@@ -1,24 +1,14 @@
 import "server-only";
 
-import {
-  createTRPCProxyClient,
-  loggerLink,
-  TRPCClientError,
-} from "@trpc/client";
-import { callProcedure } from "@trpc/server";
+import { createTRPCClient, loggerLink, TRPCClientError } from "@trpc/client";
+import { callTRPCProcedure } from "@trpc/server";
 import { observable } from "@trpc/server/observable";
-import { type TRPCErrorResponse } from "@trpc/server/rpc";
 import { cookies } from "next/headers";
 import { cache } from "react";
 
 import { appRouter, type AppRouter } from "~/server/api/root";
 import { createTRPCContext } from "~/server/api/trpc";
-import { transformer } from "./shared";
 
-/**
- * This wraps the `createTRPCContext` helper and provides the required context for the tRPC API when
- * handling a tRPC call from a React Server Component.
- */
 const createContext = cache(() => {
   return createTRPCContext({
     headers: new Headers({
@@ -29,8 +19,7 @@ const createContext = cache(() => {
   });
 });
 
-export const api = createTRPCProxyClient<AppRouter>({
-  transformer,
+export const api = createTRPCClient<AppRouter>({
   links: [
     loggerLink({
       enabled: (op) =>
@@ -46,19 +35,23 @@ export const api = createTRPCProxyClient<AppRouter>({
         observable((observer) => {
           createContext()
             .then((ctx) => {
-              return callProcedure({
-                procedures: appRouter._def.procedures,
+              const abortController = new AbortController();
+              return callTRPCProcedure({
+                router: appRouter,
                 path: op.path,
-                rawInput: op.input,
+                // v11 expects lazy input materialization
+                getRawInput: async () => op.input,
                 ctx,
                 type: op.type,
+                signal: abortController.signal,
               });
             })
             .then((data) => {
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
               observer.next({ result: { data } });
               observer.complete();
             })
-            .catch((cause: TRPCErrorResponse) => {
+            .catch((cause: object | Error) => {
               observer.error(TRPCClientError.from(cause));
             });
         }),
