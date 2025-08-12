@@ -222,7 +222,6 @@ export default function Home() {
           callToAction="If you have any suggestions for further improvement, please feel free to email us, as our goal is to create the best system possible."
         />
 
-        <AboutSection />
         <WorkWithSection />
         <WorkedWith />
         <LatestProjects projects={projects} />

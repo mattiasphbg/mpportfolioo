@@ -6,10 +6,27 @@ import Link from "next/link";
 
 export default function WorkWithSection() {
   const items = [
-    { title: "Startups", href: "#startups" },
-    { title: "SaaS", href: "#saas" },
-    { title: "Marketing teams", href: "#agencies" },
-    { title: "Sales team", href: "#marketing" },
+    {
+      title: "💻 SaaS companies - ",
+      href: "#SaaSCompanies",
+      value: "building scalable, reliable products",
+    },
+    {
+      title: "👨‍💻 Software development teams - ",
+      href: "#SoftwareDevelopmentTeams",
+      value: "delivering high-quality applications",
+    },
+    {
+      title: "☁️ Cloud teams - ",
+      href: "#CloudTeams",
+      value: "optimizing infrastructure and deployments",
+    },
+
+    {
+      title: "🏢 Office 365 & Power Platform teams - ",
+      href: "#365Team",
+      value: "improving collaboration and insights",
+    },
   ];
 
   const containerVariants = {
@@ -53,9 +70,14 @@ export default function WorkWithSection() {
               <motion.div key={item.title} variants={itemVariants}>
                 <Link
                   href={item.href}
-                  className="group flex items-center justify-between rounded-lg border border-zinc-800 p-4 text-xl transition-colors duration-200 hover:bg-zinc-800 md:text-2xl"
+                  className="group flex items-center justify-between rounded-lg border border-zinc-800 p-4 text-xl transition-all duration-200 ease-in-out hover:scale-[1.02] hover:bg-[#1a1a1a] md:text-2xl"
                 >
-                  <span>{item.title}</span>
+                  <span className="font-bold text-[#ffffff]">
+                    {item.title}
+                    <span className="text-base font-normal italic text-[#aaaaaa]">
+                      {item.value}
+                    </span>
+                  </span>
                   <ArrowUpRight
                     className="transform transition-transform duration-200 group-hover:-translate-y-1 group-hover:translate-x-1"
                     size={24}
