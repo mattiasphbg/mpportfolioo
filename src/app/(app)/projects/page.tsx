@@ -23,7 +23,6 @@ export default function Page() {
           </div>
           <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
             <ListProject />
-
             {/* <Card>
               <CardHeader className="flex flex-row items-center gap-4">
                 <Image
