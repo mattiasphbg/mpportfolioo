@@ -4,13 +4,11 @@ import { Button } from "src/components/ui/button";
 import { MessageSquare } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import AboutSection from "~/components/landing/aboutMe";
 import WorkWithSection from "~/components/landing/oftenWork";
 import WorkedWith from "~/components/landing/workedWith";
 import LatestProjects from "~/components/landing/latestProjects";
 import ContactSection from "~/components/landing/getInTouch";
 import { ProjectStory } from "~/components/landing/projectStory";
-import { HireMeSection } from "~/components/hireMe/hireMeSection";
 import { HireMeButton } from "~/components/hireMe/hireMeButton";
 
 export default function Home() {
@@ -108,7 +106,7 @@ export default function Home() {
                 real business challenges.
               </p>
               <div className="pt-4">
-                <HireMeButton>conctact</HireMeButton>
+                <HireMeButton>contact</HireMeButton>
 
                 {/* 
                 <Button
@@ -144,7 +142,7 @@ export default function Home() {
           strategy="Schedule a meeting with the client to discuss their specific needs and tailor a solution for them by utilizing resources like Google and ChatGPT for additional insights, and break down the project into manageable parts."
           process={[
             "Requirements gathering and user research",
-            "Wireframing and prototyping",
+            "Wireframe and prototyping",
             "Development of core features",
             "A table with a color-coded column to indicate license status",
             "Save the state of licenses each month.",
