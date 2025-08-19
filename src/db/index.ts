@@ -3,5 +3,6 @@ import postgres from "postgres";
 
 import * as schema from "src/db/schema";
 
-const client = postgres(process.env.NEXT_PUBLIC_SUPABASE_URL!);
+// Use DATABASE_URL for server-side database connections
+const client = postgres(process.env.DATABASE_URL!);
 export const db = drizzle(client, { schema });

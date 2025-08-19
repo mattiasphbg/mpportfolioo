@@ -5,6 +5,6 @@ export default defineConfig({
   schema: "./src/db/schema.ts",
   dialect: "postgresql",
   dbCredentials: {
-    url: process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    url: process.env.DATABASE_URL!, // Use DATABASE_URL instead of NEXT_PUBLIC_SUPABASE_URL
   },
 });
