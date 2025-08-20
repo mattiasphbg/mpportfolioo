@@ -4,11 +4,22 @@ import { Button } from "src/components/ui/button";
 import { Input } from "src/components/ui/input";
 
 import { ListProject } from "src/components/project/listProject";
+import Link from "next/link";
+import { LuArrowLeft } from "react-icons/lu";
 
 export default function Page() {
   return (
     <>
       <div className="flex min-h-screen w-full flex-col">
+        <div className="mb-6">
+          <Link
+            className="flex items-center"
+            href="https://www.petterssoncreative.se/"
+          >
+            <LuArrowLeft className="h-6 w-6" />
+            <span className="ml-2 text-lg font-semibold">Back to Home</span>
+          </Link>
+        </div>
         <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 bg-gray-100/40 p-4 dark:bg-gray-800/40 md:gap-8 md:p-10">
           <div className="mx-auto flex w-full max-w-6xl items-center gap-4">
             <form className="flex-1">
