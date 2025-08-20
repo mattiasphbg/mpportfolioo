@@ -8,23 +8,23 @@ export default function WorkWithSection() {
   const items = [
     {
       title: "💻 SaaS companies - ",
-      href: "#SaaSCompanies",
+      href: "https://www.petterssoncreative.se/projects/3",
       value: "building scalable, reliable products",
     },
     {
       title: "👨‍💻 Software development teams - ",
-      href: "#SoftwareDevelopmentTeams",
+      href: "https://www.petterssoncreative.se/projects/2",
       value: "delivering high-quality applications",
     },
     {
       title: "☁️ Cloud teams - ",
-      href: "#CloudTeams",
+      href: "https://upheads.se/future-it-partner/",
       value: "optimizing infrastructure and deployments",
     },
 
     {
       title: "🏢 Office 365 & Power Platform teams - ",
-      href: "#365Team",
+      href: "https://upheads.se/future-it-partner/",
       value: "improving collaboration and insights",
     },
   ];
