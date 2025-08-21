@@ -58,11 +58,16 @@ export default function Home() {
               <span className="sr-only">Profile</span>
             </Button>
           </Link>
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <MessageSquare children className="h-5 w-5" />
+          <Link
+            href="https://www.linkedin.com/messaging/thread/new/?recipients=urn:li:fsd_profile:ACoAACuXK9MBE0A2i-jZKOGUCUHJgdbDothu77s"
+            target="_blank"
+          >
+            <Button variant="ghost" size="icon" className="rounded-full">
+              <MessageSquare children className="h-5 w-5" />
 
-            <span className="sr-only">Contact</span>
-          </Button>
+              <span className="sr-only">Contact</span>
+            </Button>
+          </Link>
         </nav>
 
         {/* Main Content */}
